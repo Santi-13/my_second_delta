@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="delta">
+
+    <xacro:include filename="macros.xacro"/>
+    <xacro:property name="inch" value="0.0254"/>
+
+    <!-- Base of the robot -->
+    <link name="world"/>
+    
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 ${inch/4}"/>
+            <geometry>
+                <cylinder radius="0.111" length="${inch/2}"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0.2 1 0.2 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 ${inch/4}"/>
+            <geometry>
+                <cylinder radius="0.111" length="${inch/2}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="12" length="${inch/2}" radius="0.111">
+            <origin xyz="0.0 0.0 ${inch/4}"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <joint name="world_base_joint" type="fixed">
+        <origin xyz="1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!-- First Arm -->
+    <link name="arm_1_link">
+        <visual>
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.185 ${inch/4} 0.043"/>
+            </geometry>
+            <material name="green"/>      
+        </visual>
+        <collision>
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.185 ${inch/4} 0.043"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="6" x="0.185" y="${inch/4}" z="0.043">
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="base_arm_1_joint" type="revolute">
+        <origin xyz="-0.115 0.0 ${inch}" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="arm_1_link"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="100.0" velocity="100.0"/>
+        <dynamics damping="4" friction="4" />
+    </joint>
+
+    <!-- Second Arm -->
+    <link name="arm_2_link">
+        <visual>
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.185 ${inch/4} 0.043"/>
+            </geometry>
+            <material name="green"/>      
+        </visual>
+        <collision>
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.185 ${inch/4} 0.043"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="6" x="0.185" y="${inch/4}" z="0.043">
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="base_arm_2_joint" type="revolute">
+        <origin xyz="0.055 0.096 ${inch}" rpy="0.0 0.0 ${-120*pi/180}"/>
+        <parent link="base_link"/>
+        <child link="arm_2_link"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="100.0" velocity="100.0"/>
+        <dynamics damping="4" friction="4" />
+    </joint>
+
+    <!-- Third Arm -->
+    <link name="arm_3_link">
+        <visual>
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.185 ${inch/4} 0.043"/>
+            </geometry>
+            <material name="green"/>      
+        </visual>
+        <collision>
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.185 ${inch/4} 0.043"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="6" x="0.185" y="${inch/4}" z="0.043">
+            <origin xyz="-0.09 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="base_arm_3_joint" type="revolute">
+        <origin xyz="0.055 -0.096 ${inch}" rpy="0.0 0.0 ${120*pi/180}"/>
+        <parent link="base_link"/>
+        <child link="arm_3_link"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="100.0" velocity="100.0"/>
+        <dynamics damping="4" friction="4" />
+    </joint>
+
+    <!-- Forearm 1 -->
+    <link name="forearm_1_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${inch/4}" length="0.350"/>
+            </geometry>
+            <material name="green"/>      
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${inch/4}" length="0.350"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="4" length="${inch/4}" radius="0.350">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- Spherical Joint 1 -->
+    <link name="virtual_link_1_1">
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+    <link name="virtual_link_1_2"> 
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="arm_forearm_1_1_joint" type="revolute">
+        <origin xyz="-0.190 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_1_link"/>
+        <child link="virtual_link_1_1"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+        <dynamics friction="0.003" damping="0.0"/>
+    </joint>
+    <joint name="arm_forearm_1_2_joint" type="revolute">
+        <parent link="virtual_link_1_1"/>
+        <child link="virtual_link_1_2"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi}" upper="${pi}" effort="100.0" velocity="100.0"/>
+        <dynamics friction="0.003" damping="0.0"/>
+    </joint>
+    <joint name="arm_forearm_1_3_joint" type="revolute">
+        <parent link="virtual_link_1_2"/>
+        <child link="forearm_1_link"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+        <dynamics friction="0.003" damping="0.0"/>
+    </joint>
+
+    <!-- Forearm 2 -->
+    <link name="forearm_2_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${inch/4}" length="0.350"/>
+            </geometry>
+            <material name="green"/>      
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${inch/4}" length="0.350"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="4" length="${inch/4}" radius="0.350">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- Spherical Joint 2 -->
+    <link name="virtual_link_2_1">
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+    <link name="virtual_link_2_2"> 
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="arm_forearm_2_1_joint" type="revolute">
+        <origin xyz="-0.190 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_2_link"/>
+        <child link="virtual_link_2_1"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_2_2_joint" type="revolute">
+        <parent link="virtual_link_2_1"/>
+        <child link="virtual_link_2_2"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi}" upper="${pi}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_2_3_joint" type="revolute">
+        <parent link="virtual_link_2_2"/>
+        <child link="forearm_2_link"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+
+    <!-- Forearm 3 -->
+    <link name="forearm_3_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${inch/4}" length="0.350"/>
+            </geometry>
+            <material name="green"/>      
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.175" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${inch/4}" length="0.350"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="4" length="${inch/4}" radius="0.350">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- Spherical Joint 3 -->
+    <link name="virtual_link_3_1">
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+    <link name="virtual_link_3_2"> 
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="arm_forearm_3_1_joint" type="revolute">
+        <origin xyz="-0.190 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="arm_3_link"/>
+        <child link="virtual_link_3_1"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_3_2_joint" type="revolute">
+        <parent link="virtual_link_3_1"/>
+        <child link="virtual_link_3_2"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi}" upper="${pi}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_3_3_joint" type="revolute">
+        <parent link="virtual_link_3_2"/>
+        <child link="forearm_3_link"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+
+    <!-- Mobile Platform -->
+    <link name="mobile_platform">
+        <visual>
+            <geometry>
+                <cylinder radius="0.035" length="${inch/4}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 -${inch/8}"/>
+            <material name="green">
+                
+            </material>
+        </visual>   
+        <collision>
+            <geometry>
+                <cylinder radius="0.035" length="${inch/4}"/>
+            </geometry>
+            <origin xyz="0.0 0.0 -${inch/8}"/>
+        </collision>
+        <xacro:inertial_cylinder mass="4" length="${inch/4}" radius="0.035">
+            <origin xyz="0.0 0.0 -${inch/8}"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- Spherical Joint 4 -->
+    <link name="virtual_link_1_4">
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+    <link name="virtual_link_1_5"> 
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="arm_forearm_1_4_joint" type="revolute">
+        <origin xyz="0.0 0.0 ${0.350+inch/4}" rpy="0.0 0.0 0.0"/>
+        <parent link="forearm_1_link"/>
+        <child link="virtual_link_1_4"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_1_5_joint" type="revolute">
+        <parent link="virtual_link_1_4"/>
+        <child link="virtual_link_1_5"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi}" upper="${pi}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_1_6_joint" type="revolute">
+        <origin xyz="-0.035 0.0 0.0"/>
+        <parent link="virtual_link_1_5"/>
+        <child link="mobile_platform"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+
+    <!-- Spherical Joint 5 -->
+    <link name="virtual_link_2_4">
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+    <link name="virtual_link_2_5"> 
+        <xacro:inertial_box mass="0.1" x="0.01" y="0.01" z="0.01">
+            <origin xyz="0.0 0.0 0.0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <joint name="arm_forearm_2_4_joint" type="revolute">
+        <origin xyz="0.0 0.0 ${0.350+inch/4}" rpy="0.0 0.0 0.0"/>
+        <parent link="forearm_2_link"/>
+        <child link="virtual_link_2_4"/>
+        <axis xyz="1.0 0.0 0.0"/>
+        <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <joint name="arm_forearm_2_5_joint" type="revolute">
+        <parent link="virtual_link_2_4"/>
+        <child link="virtual_link_2_5"/>
+        <axis xyz="0.0 1.0 0.0"/>
+        <limit lower="${-pi}" upper="${pi}" effort="100.0" velocity="100.0"/>
+    </joint>
+    <gazebo>
+        <joint name="arm_forearm_2_6_joint" type="revolute">
+            <origin xyz="-0.0175 0.03031 0.0"/>
+            <parent link="mobile_platform"/>
+            <child link="virtual_link_2_5"/>
+            <axis xyz="0.0 0.0 1.0"/>
+            <limit lower="${-24*pi/180}" upper="${24*pi/180}" effort="100.0" velocity="100.0"/>
+        </joint>
+    </gazebo>
+
+    <!-- Include gazebo plugins -->
+    <xacro:include filename="gazebo_stuff.xacro" />
+
+</robot>
