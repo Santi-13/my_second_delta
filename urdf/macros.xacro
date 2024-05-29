@@ -58,64 +58,64 @@
         </gazebo>
 
         <transmission name="arm_${prefix}_joint_trans">
-            <type>transmission_interface/SimpleTransmission</type>
+            <type>transmission_interface/Transmission</type>
             <joint name="arm_${prefix}_joint">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
             </joint>
             <actuator name="arm_${prefix}_joint_motor">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
         <transmission name="forearm_${prefix}_top_rignt_joint_trans">
-            <type>transmission_interface/SimpleTransmission</type>
+            <type>transmission_interface/Transmission</type>
             <joint name="forearm_${prefix}_top_rignt_joint">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
             </joint>
             <actuator name="forearm_${prefix}_top_rignt_joint_motor">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
         <transmission name="forearm_${prefix}_top_left_joint_trans">
-            <type>transmission_interface/SimpleTransmission</type>
+            <type>transmission_interface/Transmission</type>
             <joint name="forearm_${prefix}_top_left_joint">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
             </joint>
             <actuator name="forearm_${prefix}_top_left_joint_motor">
-                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
         <transmission name="forearm_${prefix}_right_bottom_joint_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="forearm_${prefix}_right_bottom_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="forearm_${prefix}_right_bottom_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
+            <type>transmission_interface/Transmission</type>
+            <joint name="forearm_${prefix}_right_bottom_joint">
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+            </joint>
+            <actuator name="forearm_${prefix}_right_bottom_joint_motor">
+                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
         </transmission>
         <transmission name="forearm_${prefix}_bottom_end_joint_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="forearm_${prefix}_bottom_end_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="forearm_${prefix}_bottom_end_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
+            <type>transmission_interface/Transmission</type>
+            <joint name="forearm_${prefix}_bottom_end_joint">
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+            </joint>
+            <actuator name="forearm_${prefix}_bottom_end_joint_motor">
+                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
         </transmission>
         <transmission name="forearm_${prefix}_bottom_virtual_joint_trans">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="forearm_${prefix}_bottom_virtual_joint">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="forearm_${prefix}_bottom_virtual_joint_motor">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
+            <type>transmission_interface/Transmission</type>
+            <joint name="forearm_${prefix}_bottom_virtual_joint">
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+            </joint>
+            <actuator name="forearm_${prefix}_bottom_virtual_joint_motor">
+                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
         </transmission>
     </xacro:macro>
 

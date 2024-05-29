@@ -9,10 +9,9 @@
     </physics>
 
     <gazebo>
-        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-        <robotNamespace></robotNamespace>
-        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-        <legacyModeNS>true</legacyModeNS>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <robotNamespace></robotNamespace>
+            <robotSimType>gazebo_ros2_control/DefaultRobotHWSim</robotSimType>
         </plugin>
     </gazebo>
 
@@ -27,33 +26,33 @@
     </gazebo>
 
     <transmission name="arm_1_delta_joint_trans">
-        <type>transmission_interface/SimpleTransmission</type>
+        <type>transmission_interface/Transmission</type>
         <joint name="arm_1_delta_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
         </joint>
-        <actuator name="arm_1_delta_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
+            <actuator name="arm_1_delta_joint_motor">
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
     <transmission name="arm_2_delta_joint_trans">
-        <type>transmission_interface/SimpleTransmission</type>
+        <type>transmission_interface/Transmission</type>
         <joint name="arm_2_delta_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
         </joint>
-        <actuator name="arm_2_delta_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
+            <actuator name="arm_2_delta_joint_motor">
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
     <transmission name="arm_3_delta_joint_trans">
-        <type>transmission_interface/SimpleTransmission</type>
+        <type>transmission_interface/Transmission</type>
         <joint name="arm_3_delta_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
         </joint>
-        <actuator name="arm_3_delta_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
+            <actuator name="arm_3_delta_joint_motor">
+            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
 </robot>
