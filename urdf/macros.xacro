@@ -137,8 +137,6 @@
     <xacro:property name="forearm_height2" value="0.5" /> <!-- lower link -->
     <xacro:property name="forearm_height3" value="0.03" /> <!-- Upper link -->
 
-    <xacro:include filename="delta_arm.gazebo.xacro" />
-
     <xacro:macro name="delta_arm" params="prefix">
         <link name="$arm_${prefix}_link">
             <collision>
