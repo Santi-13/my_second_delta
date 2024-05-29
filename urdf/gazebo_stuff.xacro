@@ -1,42 +1,59 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    <physics type='ode'>
+        <max_step_size>0.001</max_step_size>
+        <real_time_factor>0.1</real_time_factor>
+        <real_time_update_rate>1000</real_time_update_rate>
+        <gravity>0 0 -9.8</gravity>
+    </physics>
+
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace></robotNamespace>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        <legacyModeNS>true</legacyModeNS>
+        </plugin>
+    </gazebo>
+
     <gazebo reference="base_link">
-        <material>Gazebo/Green</material>
+        <material>Gazebo/Orange</material>
+        <selfCollide>false</selfCollide>
     </gazebo>
 
-
-    <gazebo>
-        <plugin name="gazebo_ros_joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
-            <update_rate>20</update_rate> 
-            
-            <joint_name>base_arm_1_joint</joint_name>
-            <joint_name>arm_forearm_1_1_joint</joint_name>
-            <joint_name>arm_forearm_1_2_joint</joint_name>
-            <joint_name>arm_forearm_1_3_joint</joint_name>
-            <joint_name>arm_forearm_1_4_joint</joint_name>
-            <joint_name>arm_forearm_1_5_joint</joint_name>
-            <joint_name>arm_forearm_1_6_joint</joint_name>
-
-            <joint_name>base_arm_2_joint</joint_name>
-            <joint_name>arm_forearm_2_1_joint</joint_name>
-            <joint_name>arm_forearm_2_2_joint</joint_name>
-            <joint_name>arm_forearm_2_3_joint</joint_name>
-            <joint_name>arm_forearm_2_4_joint</joint_name>
-            <joint_name>arm_forearm_2_5_joint</joint_name>
-            <joint_name>arm_forearm_2_6_joint</joint_name>
-            
-            <joint_name>base_arm_3_joint</joint_name>
-            <joint_name>arm_forearm_3_1_joint</joint_name>
-            <joint_name>arm_forearm_3_2_joint</joint_name>
-            <joint_name>arm_forearm_3_3_joint</joint_name>
-            
-        </plugin>
+    <gazebo reference="end_link">
+        <material>Gazebo/Orange</material>
+        <selfCollide>false</selfCollide>
     </gazebo>
 
-    <gazebo>
-        <plugin name="gazebo_ros_joint_pose_trajectory" filename="libgazebo_ros_joint_pose_trajectory.so">
-            <update_rate>20</update_rate>
-        </plugin>
-    </gazebo>
+    <transmission name="arm_1_delta_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_1_delta_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_1_delta_joint_motor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="arm_2_delta_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_2_delta_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_2_delta_joint_motor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="arm_3_delta_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="arm_3_delta_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="arm_3_delta_joint_motor">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
 </robot>
