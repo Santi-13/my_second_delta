@@ -7,14 +7,13 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
-import xacro
-
 def generate_launch_description():
     # Loading URDF file into a parameter
     bringup_dir = get_package_share_directory('my_second_delta')
-    urdf_path = os.path.join(bringup_dir, 'urdf', 'delta.urdf.xacro')
-    robot_raw_description = xacro.process_file(urdf_path).toxml()
-    sdf_path = os.path.join(bringup_dir, 'urdf', 'delta_pro.sdf')
+    urdf_path = os.path.join(bringup_dir, 'urdf', 'delta.urdf')
+
+    with open(urdf_path, 'r') as urdf_file:
+        robot_description_content = urdf_file.read()
 
     return LaunchDescription([
         Node(
@@ -25,6 +24,12 @@ def generate_launch_description():
                        '-d' + os.path.join(bringup_dir, 'config', 'config_file.rviz')],
             output='screen',
         ),
+        Node(
+            package='robot_state_publisher', 
+            executable='robot_state_publisher', 
+            output='screen',
+            parameters=[{'robot_description': robot_description_content}],
+        ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
@@ -34,12 +39,6 @@ def generate_launch_description():
             executable='spawn_entity.py',
             arguments=['-entity', 'delta', '-topic', 'robot_description'],
             output='screen',
-        ),
-        Node(
-            package='robot_state_publisher', 
-            executable='robot_state_publisher', 
-            output='screen',
-            parameters=[{'robot_description': robot_raw_description}],
         ),
         # Node(
         #     name='joint_state_publisher',

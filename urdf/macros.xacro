@@ -1,347 +1,258 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:macro name="inertial_sphere" params="mass radius *origin">
-        <inertial>
-            <xacro:insert_block name="origin"/>
-            <mass value="${mass}"/>
-            <inertia ixx="${(2/5) * mass * (radius * radius)}" ixy="0.0" ixz="0.0" 
-                    iyy="${(2/5) * mass * (radius * radius)}" iyz="0.0" 
-                    izz="${(2/5) * mass * (radius * radius)}"/>
-        </inertial>
-    </xacro:macro>
+    <!-- Constants for robot dimensions -->
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <!-- ==================================================================== -->
+  <!-- ==================================================================== -->
+  <!-- Important angle when robot at origin point, must be calculated!!!!!! -->
+  <xacro:property name="elbow_angle" value="${30*PI/180}" />
+  <!-- ==================================================================== -->
+  <!-- ==================================================================== -->
+  <xacro:property name="wrist_angle" value="-${elbow_angle}" />
+  <xacro:property name="mass" value="0.02" /> <!-- arbitrary value for mass -->
+  <xacro:property name="upper_width" value="0.04" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="lower_width" value="0.01" /> 
+  <xacro:property name="upper_height" value="0.2" /> <!-- base and end links -->
+  <xacro:property name="lower_height1" value="0.06" /> <!-- Upper link -->
+  <xacro:property name="lower_height2" value="0.5" /> <!-- lower link -->
+  <xacro:property name="lower_height3" value="0.03" /> <!-- Upper link -->
 
-    <xacro:macro name="inertial_box" params="mass x y z *origin">
-        <inertial>
-            <xacro:insert_block name="origin"/>
-            <mass value="${mass}"/>
-            <inertia ixx="${(1/12) * mass * (y*y + z*z)}" ixy="0.0" ixz="0.0" 
-                    iyy="${(1/12) * mass * (x*x + z*z)}" iyz="0.0" 
-                    izz="${(1/12) * mass * (y*y + x*x)}"/>
-        </inertial>
-    </xacro:macro>
+  <xacro:macro name="delta_arm" params="prefix">
+    <link name="${prefix}upper_link">
+      <collision>
+        <origin xyz="${upper_height/2} 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${upper_height} ${upper_width} ${upper_width}"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="${upper_height/2} 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${upper_height} ${upper_width} ${upper_width}"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin xyz="0 0 ${upper_height/2}" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia
+          ixx="${mass / 12.0 * (upper_width*upper_width + upper_width*upper_width)}" ixy="0.0" ixz="0.0"
+          iyy="${mass / 12.0 * (upper_height*upper_height + upper_width*upper_width)}" iyz="0.0"
+          izz="${mass / 12.0 * (upper_height*upper_height + upper_width*upper_width)}"/>
+      </inertial>
+    </link>
 
-    <xacro:macro name="inertial_cylinder" params="mass length radius *origin">
-        <inertial>
-            <xacro:insert_block name="origin"/>
-            <mass value="${mass}"/>
-            <inertia ixx="${(1/12) * mass * (3*radius*radius + length*length)}" ixy="0.0" ixz="0.0" 
-                    iyy="${(1/12) * mass * (3*radius*radius + length*length)}" iyz="0.0" 
-                    izz="${(1/2) * mass * (radius*radius)}"/>
-        </inertial>
-    </xacro:macro>
+    <joint name="${prefix}upper_joint" type="continuous">
+      <parent link="${prefix}upper_link"/>
+      <child link="${prefix}lower_top_link"/>
+      <origin xyz="${upper_height} 0 0" rpy="0 ${elbow_angle} 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
 
-    <xacro:macro name="delta_arm_gazebo" params="prefix">
-        <gazebo reference="$arm_${prefix}_link">
-            <material>Gazebo/Black</material>
-            <selfCollide>false</selfCollide>
-        </gazebo>
-        <gazebo reference="forearm_${prefix}_top_link">
-            <material>Gazebo/Grey</material>
-            <selfCollide>false</selfCollide>
-        </gazebo>
-        <gazebo reference="forearm_${prefix}_right_link">
-            <material>Gazebo/Grey</material>
-            <selfCollide>false</selfCollide>
-        </gazebo>
-        <gazebo reference="forearm_${prefix}_left_link">
-            <material>Gazebo/Grey</material>
-            <selfCollide>false</selfCollide>
-        </gazebo>
-        <gazebo reference="forearm_${prefix}_bottom_link">
-            <material>Gazebo/Grey</material>
-            <selfCollide>false</selfCollide>
-        </gazebo>
-        <gazebo reference="forearm_${prefix}_end_link">
-            <material>Gazebo/Black</material>
-            <selfCollide>false</selfCollide>
-        </gazebo>
+    <link name="${prefix}lower_top_link">
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_height1} ${lower_width}"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_height1} ${lower_width}"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.2 0.2 0.2 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia
+          ixx="${mass / 12.0 * (lower_width*lower_width + lower_height1*lower_height1)}" ixy="0.0" ixz="0.0"
+          iyy="${mass / 12.0 * (lower_width*lower_width + lower_width*lower_width)}" iyz="0.0"
+          izz="${mass / 12.0 * (lower_width*lower_width + lower_height1*lower_height1)}"/>
+      </inertial>
+    </link>
 
-        <transmission name="arm_${prefix}_joint_trans">
-            <type>transmission_interface/Transmission</type>
-            <joint name="arm_${prefix}_joint">
-            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-            </joint>
-            <actuator name="arm_${prefix}_joint_motor">
-                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>
-        <transmission name="forearm_${prefix}_top_rignt_joint_trans">
-            <type>transmission_interface/Transmission</type>
-            <joint name="forearm_${prefix}_top_rignt_joint">
-            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-            </joint>
-            <actuator name="forearm_${prefix}_top_rignt_joint_motor">
-                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>
-        <transmission name="forearm_${prefix}_top_left_joint_trans">
-            <type>transmission_interface/Transmission</type>
-            <joint name="forearm_${prefix}_top_left_joint">
-            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-            </joint>
-            <actuator name="forearm_${prefix}_top_left_joint_motor">
-                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>
-        <transmission name="forearm_${prefix}_right_bottom_joint_trans">
-            <type>transmission_interface/Transmission</type>
-            <joint name="forearm_${prefix}_right_bottom_joint">
-            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-            </joint>
-            <actuator name="forearm_${prefix}_right_bottom_joint_motor">
-                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>
-        <transmission name="forearm_${prefix}_bottom_end_joint_trans">
-            <type>transmission_interface/Transmission</type>
-            <joint name="forearm_${prefix}_bottom_end_joint">
-            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-            </joint>
-            <actuator name="forearm_${prefix}_bottom_end_joint_motor">
-                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>
-        <transmission name="forearm_${prefix}_bottom_virtual_joint_trans">
-            <type>transmission_interface/Transmission</type>
-            <joint name="forearm_${prefix}_bottom_virtual_joint">
-            <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-            </joint>
-            <actuator name="forearm_${prefix}_bottom_virtual_joint_motor">
-                <hardwareInterface>hardware_interface::EffortJoint</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>
-    </xacro:macro>
+    <joint name="${prefix}lower_top_rignt_joint" type="continuous">
+      <parent link="${prefix}lower_top_link"/>
+      <child link="${prefix}lower_right_link"/>
+      <origin xyz="0 ${-lower_height1/2} 0" rpy="0 0 0"/>
+      <axis xyz="1 0 0"/>
+    </joint>
 
-        <!-- Constants for robot dimensions -->
-    <xacro:property name="PI" value="3.1415926535897931"/>
-    <xacro:property name="inch" value="0.0254"/>
-    <!-- ==================================================================== -->
-    <!-- ==================================================================== -->
-    <!-- Important angle when robot at origin point, must be calculated!!!!!! -->
-    <xacro:property name="elbow_angle" value="${30*PI/180}" />
-    <!-- ==================================================================== -->
-    <!-- ==================================================================== -->
-    <xacro:property name="wrist_angle" value="-${elbow_angle}" />
-    <xacro:property name="mass" value="0.02" /> <!-- arbitrary value for mass -->
-    <xacro:property name="arm_width" value="${inch/4}" /> <!-- Square dimensions (widthxwidth) of beams -->
-    <xacro:property name="forearm_width" value="0.01" /> 
-    <xacro:property name="arm_height" value="0.35" /> <!-- base and end links -->
-    <xacro:property name="forearm_height1" value="0.06" /> <!-- Upper link -->
-    <xacro:property name="forearm_height2" value="0.5" /> <!-- lower link -->
-    <xacro:property name="forearm_height3" value="0.03" /> <!-- Upper link -->
+    <link name="${prefix}lower_right_link">
+      <collision>
+        <origin xyz="0 0 ${-lower_height2/2}" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_width} ${lower_height2}"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0 0 ${-lower_height2/2}" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_width} ${lower_height2}"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.2 0.2 0.2 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin xyz="0 0 ${-lower_height2/2}" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia
+          ixx="${mass / 12.0 * (lower_width*lower_width + lower_height2*lower_height2)}" ixy="0.0" ixz="0.0"
+          iyy="${mass / 12.0 * (lower_height2*lower_height2 + lower_width*lower_width)}" iyz="0.0"
+          izz="${mass / 12.0 * (lower_width*lower_width + lower_width*lower_width)}"/>
+      </inertial>
+    </link>
 
-    <xacro:macro name="delta_arm" params="prefix">
-        <link name="$arm_${prefix}_link">
-            <collision>
-                <origin xyz="${arm_height/2} 0 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${arm_height} ${arm_width} ${arm_width}"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="${arm_height/2} 0 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${arm_height} ${arm_width} ${arm_width}"/>
-                </geometry>
-                <material name="black">
-                <color rgba="0.0 0.0 0.0 1.0"/>
-                </material>
-            </visual>
-            <xacro:inertial_box mass="${mass}" x="${arm_height}" y="${arm_width}" z="${arm_width}">
-                <origin xyz="0 0 ${arm_height/2}" rpy="0 0 0"/>
-            </xacro:inertial_box>
-        </link>
+    <joint name="${prefix}lower_top_left_joint" type="continuous">
+      <parent link="${prefix}lower_top_link"/>
+      <child link="${prefix}lower_left_link"/>
+      <origin xyz="0 ${lower_height1/2} 0" rpy="0 0 0"/>
+      <axis xyz="1 0 0"/>
+    </joint>
 
-        <joint name="$arm_${prefix}_joint" type="continuous">
-            <parent link="$arm_${prefix}_link"/>
-            <child link="forearm_${prefix}_top_link"/>
-            <origin xyz="${arm_height} 0 0" rpy="0 ${elbow_angle} 0"/>
-            <axis xyz="0 1 0"/>
-        </joint>
+    <link name="${prefix}lower_left_link">
+      <collision>
+        <origin xyz="0 0 ${-lower_height2/2}" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_width} ${lower_height2}"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0 0 ${-lower_height2/2}" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_width} ${lower_height2}"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.2 0.2 0.2 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin xyz="0 0 ${-lower_height2/2}" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia
+          ixx="${mass / 12.0 * (lower_width*lower_width + lower_height2*lower_height2)}" ixy="0.0" ixz="0.0"
+          iyy="${mass / 12.0 * (lower_height2*lower_height2 + lower_width*lower_width)}" iyz="0.0"
+          izz="${mass / 12.0 * (lower_width*lower_width + lower_width*lower_width)}"/>
+      </inertial>
+    </link>
 
-        <link name="forearm_${prefix}_top_link">
-            <collision>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_height1} ${forearm_width}"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_height1} ${forearm_width}"/>
-                </geometry>
-                <material name="grey">
-                <color rgba="0.2 0.2 0.2 1.0"/>
-                </material>
-            </visual>
-            <xacro:inertial_box mass="${mass}" x="${forearm_width}" y="${forearm_height1}" z="${forearm_width}">
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-            </xacro:inertial_box>
-        </link>
+    <joint name="${prefix}lower_right_bottom_joint" type="continuous">
+      <parent link="${prefix}lower_right_link"/>
+      <child link="${prefix}lower_bottom_link"/>
+      <origin xyz="0 0 ${-lower_height2}" rpy="0 0 0"/>
+      <axis xyz="1 0 0"/>
+    </joint>
 
-        <joint name="forearm_${prefix}_top_right_joint" type="continuous">
-            <parent link="forearm_${prefix}_top_link"/>
-            <child link="forearm_${prefix}_right_link"/>
-            <origin xyz="0 ${-forearm_height1/2} 0" rpy="0 0 0"/>
-            <axis xyz="1 0 0"/>
-        </joint>
+    <link name="${prefix}lower_bottom_link">
+      <collision>
+        <origin xyz="0 ${lower_height1/2} 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_height1} ${lower_width}"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0 ${lower_height1/2} 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_width} ${lower_height1} ${lower_width}"/>
+        </geometry>
+        <material name="grey">
+          <color rgba="0.2 0.2 0.2 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin xyz="0 ${lower_height1/2} 0" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia
+          ixx="${mass / 12.0 * (lower_width*lower_width + lower_height1*lower_height1)}" ixy="0.0" ixz="0.0"
+          iyy="${mass / 12.0 * (lower_height1*lower_height1 + lower_width*lower_width)}" iyz="0.0"
+          izz="${mass / 12.0 * (lower_width*lower_width + lower_width*lower_width)}"/>
+      </inertial>
+    </link>
 
-        <link name="forearm_${prefix}_right_link">
-            <collision>
-                <origin xyz="0 0 ${-forearm_height2/2}" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_width} ${forearm_height2}"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0 0 ${-forearm_height2/2}" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_width} ${forearm_height2}"/>
-                </geometry>
-                <material name="grey">
-                <color rgba="0.2 0.2 0.2 1.0"/>
-                </material>
-            </visual>
-            <xacro:inertial_box mass="${mass}" x="${forearm_width}" y="${forearm_width}" z="${forearm_height2}">
-                <origin xyz="0 0 ${-forearm_height2/2}" rpy="0 0 0"/>
-            </xacro:inertial_box>
-        </link>
+    <joint name="${prefix}lower_bottom_end_joint" type="continuous">
+      <parent link="${prefix}lower_bottom_link"/>
+      <child link="${prefix}lower_end_link"/>
+      <origin xyz="0 ${lower_height1/2} 0" rpy="0 ${wrist_angle} 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
 
-        <joint name="forearm_${prefix}_top_left_joint" type="continuous">
-            <parent link="forearm_${prefix}_top_link"/>
-            <child link="forearm_${prefix}_left_link"/>
-            <origin xyz="0 ${forearm_height1/2} 0" rpy="0 0 0"/>
-            <axis xyz="1 0 0"/>
-        </joint>
+    <link name="${prefix}lower_end_link">
+      <collision>
+        <origin xyz="${-lower_height3/2} 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_height3} ${lower_width} ${lower_width}"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="${-lower_height3/2} 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${lower_height3} ${lower_width} ${lower_width}"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <origin xyz="${-lower_height3/2} 0 0" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia
+          ixx="${mass / 12.0 * (lower_width*lower_width + lower_width*lower_width)}" ixy="0.0" ixz="0.0"
+          iyy="${mass / 12.0 * (lower_height3*lower_height3 + lower_width*lower_width)}" iyz="0.0"
+          izz="${mass / 12.0 * (lower_height3*lower_height3 + lower_width*lower_width)}"/>
+      </inertial>
+    </link>
 
-        <link name="forearm_${prefix}_left_link">
-            <collision>
-                <origin xyz="0 0 ${-forearm_height2/2}" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_width} ${forearm_height2}"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0 0 ${-forearm_height2/2}" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_width} ${forearm_height2}"/>
-                </geometry>
-                <material name="grey">
-                <color rgba="0.2 0.2 0.2 1.0"/>
-                </material>
-            </visual>
-            <xacro:inertial_box mass="${mass}" x="${forearm_width}" y="${forearm_width}" z="${forearm_height2}">
-                <origin xyz="0 0 ${-forearm_height2/2}" rpy="0 0 0"/>
-            </xacro:inertial_box>
-        </link>
+    <joint name="${prefix}lower_bottom_virtual_joint" type="continuous">
+      <parent link="${prefix}lower_bottom_link"/>
+      <child link="${prefix}lower_bottom_virtual_link"/>
+      <origin xyz="0 ${lower_height1} 0" rpy="0 0 0"/>
+      <axis xyz="1 0 0"/>
+    </joint>
 
-        <joint name="forearm_${prefix}_right_bottom_joint" type="continuous">
-            <parent link="forearm_${prefix}_right_link"/>
-            <child link="forearm_${prefix}_bottom_link"/>
-            <origin xyz="0 0 ${-forearm_height2}" rpy="0 0 0"/>
-            <axis xyz="1 0 0"/>
-        </joint>
+    <link name="${prefix}lower_bottom_virtual_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia
+          ixx="0.001" ixy="0.0" ixz="0.0"
+          iyy="0.001" iyz="0.0"
+          izz="0.001"/>
+      </inertial>
+    </link>
 
-        <link name="forearm_${prefix}_bottom_link">
-            <collision>
-                <origin xyz="0 ${forearm_height1/2} 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_height1} ${forearm_width}"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="0 ${forearm_height1/2} 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_width} ${forearm_height1} ${forearm_width}"/>
-                </geometry>
-                <material name="grey">
-                <color rgba="0.2 0.2 0.2 1.0"/>
-                </material>
-            </visual>
-            <xacro:inertial_box mass="${mass}" x="${forearm_width}" y="${forearm_height1}" z="${forearm_width}">
-                <origin xyz="0 ${forearm_height1/2} 0" rpy="0 0 0"/>
-            </xacro:inertial_box>
-        </link>
+    <joint name="${prefix}lower_left_virtual_joint" type="fixed">
+      <parent link="${prefix}lower_left_link"/>
+      <child link="${prefix}lower_left_virtual_link"/>
+      <origin xyz="0 0 ${-lower_height2}" rpy="0 0 0"/>
+    </joint>
 
-        <joint name="forearm_${prefix}_bottom_end_joint" type="continuous">
-            <parent link="forearm_${prefix}_bottom_link"/>
-            <child link="forearm_${prefix}_end_link"/>
-            <origin xyz="0 ${forearm_height1/2} 0" rpy="0 ${wrist_angle} 0"/>
-            <axis xyz="0 1 0"/>
-        </joint>
+    <link name="${prefix}lower_left_virtual_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia
+          ixx="0.001" ixy="0.0" ixz="0.0"
+          iyy="0.001" iyz="0.0"
+          izz="0.001"/>
+      </inertial>
+    </link>
 
-        <link name="forearm_${prefix}_end_link">
-            <collision>
-                <origin xyz="${-forearm_height3/2} 0 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_height3} ${forearm_width} ${forearm_width}"/>
-                </geometry>
-            </collision>
-            <visual>
-                <origin xyz="${-forearm_height3/2} 0 0" rpy="0 0 0"/>
-                <geometry>
-                <box size="${forearm_height3} ${forearm_width} ${forearm_width}"/>
-                </geometry>
-                <material name="black">
-                <color rgba="0.0 0.0 0.0 1.0"/>
-                </material>
-            </visual>
-            <xacro:inertial_box mass="${mass}" x="${forearm_height3}" y="${forearm_width}" z="${forearm_width}">
-                <origin xyz="${-forearm_height3/2} 0 0" rpy="0 0 0"/>
-            </xacro:inertial_box>
-        </link>
+    <gazebo>
+      <joint name="${prefix}lower_left_bottom_joint" type="fixed">
+        <parent>${prefix}lower_left_virtual_link</parent>
+        <child>${prefix}lower_bottom_virtual_link</child>
+        <pose> 0 0 0 0 0 0 </pose>
+      </joint>
+    </gazebo>
 
-        <joint name="forearm_${prefix}_bottom_virtual_joint" type="continuous">
-            <parent link="forearm_${prefix}_bottom_link"/>
-            <child link="forearm_${prefix}_bottom_virtual_link"/>
-            <origin xyz="0 ${forearm_height1} 0" rpy="0 0 0"/>
-            <axis xyz="1 0 0"/>
-        </joint>
-
-        <link name="forearm_${prefix}_bottom_virtual_link">
-            <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="0.01"/>
-                <inertia
-                ixx="0.001" ixy="0.0" ixz="0.0"
-                iyy="0.001" iyz="0.0"
-                izz="0.001"/>
-            </inertial>
-        </link>
-
-        <joint name="forearm_${prefix}_left_virtual_joint" type="fixed">
-            <parent link="forearm_${prefix}_left_link"/>
-            <child link="forearm_${prefix}_left_virtual_link"/>
-            <origin xyz="0 0 ${-forearm_height2}" rpy="0 0 0"/>
-        </joint>
-
-        <link name="forearm_${prefix}_left_virtual_link">
-            <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="0.01"/>
-                <inertia
-                ixx="0.001" ixy="0.0" ixz="0.0"
-                iyy="0.001" iyz="0.0"
-                izz="0.001"/>
-            </inertial>
-        </link>
-
-        <gazebo>
-            <joint name="forearm_${prefix}_left_bottom_joint" type="fixed">
-                <parent>forearm_${prefix}_left_virtual_link</parent>
-                <child>forearm_${prefix}_bottom_virtual_link</child>
-                <pose> 0 0 0 0 0 0 </pose>
-            </joint>
-        </gazebo>
-
-        <xacro:delta_arm_gazebo prefix="${prefix}"/>
-    </xacro:macro>
+    <xacro:delta_arm_gazebo prefix="${prefix}"/>
+  </xacro:macro>
 </robot>
