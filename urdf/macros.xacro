@@ -1,54 +1,81 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:macro name="inertial_sphere" params="mass radius *origin">
+      <inertial>
+          <xacro:insert_block name="origin"/>
+          <mass value="${mass}"/>
+          <inertia ixx="${(2/5) * mass * (radius * radius)}" ixy="0.0" ixz="0.0" 
+                  iyy="${(2/5) * mass * (radius * radius)}" iyz="0.0" 
+                  izz="${(2/5) * mass * (radius * radius)}"/>
+      </inertial>
+  </xacro:macro>
+
+  <xacro:macro name="inertial_box" params="mass x y z *origin">
+      <inertial>
+          <xacro:insert_block name="origin"/>
+          <mass value="${mass}"/>
+          <inertia ixx="${(1/12) * mass * (y*y + z*z)}" ixy="0.0" ixz="0.0" 
+                  iyy="${(1/12) * mass * (x*x + z*z)}" iyz="0.0" 
+                  izz="${(1/12) * mass * (y*y + x*x)}"/>
+      </inertial>
+  </xacro:macro>
+
+  <xacro:macro name="inertial_cylinder" params="mass length radius *origin">
+      <inertial>
+          <xacro:insert_block name="origin"/>
+          <mass value="${mass}"/>
+          <inertia ixx="${(1/12) * mass * (3*radius*radius + length*length)}" ixy="0.0" ixz="0.0" 
+                  iyy="${(1/12) * mass * (3*radius*radius + length*length)}" iyz="0.0" 
+                  izz="${(1/2) * mass * (radius*radius)}"/>
+      </inertial>
+  </xacro:macro>
+
     <!-- Constants for robot dimensions -->
   <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="inch" value="0.0254"/>
   <!-- ==================================================================== -->
   <!-- ==================================================================== -->
   <!-- Important angle when robot at origin point, must be calculated!!!!!! -->
-  <xacro:property name="elbow_angle" value="${30*PI/180}" />
+  <xacro:property name="elbow_angle" value="${32.5*PI/180}" />
   <!-- ==================================================================== -->
   <!-- ==================================================================== -->
   <xacro:property name="wrist_angle" value="-${elbow_angle}" />
   <xacro:property name="mass" value="0.02" /> <!-- arbitrary value for mass -->
-  <xacro:property name="upper_width" value="0.04" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="upper_width" value="${inch/4}" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="upper_height" value="0.043"/>
   <xacro:property name="lower_width" value="0.01" /> 
-  <xacro:property name="upper_height" value="0.2" /> <!-- base and end links -->
+  <xacro:property name="upper_length" value="0.1475" /> <!-- base and end links -->
   <xacro:property name="lower_height1" value="0.06" /> <!-- Upper link -->
-  <xacro:property name="lower_height2" value="0.5" /> <!-- lower link -->
+  <xacro:property name="lower_height2" value="0.375" /> <!-- lower link -->
   <xacro:property name="lower_height3" value="0.03" /> <!-- Upper link -->
 
   <xacro:macro name="delta_arm" params="prefix">
     <link name="${prefix}upper_link">
       <collision>
-        <origin xyz="${upper_height/2} 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <box size="${upper_height} ${upper_width} ${upper_width}"/>
+          <box size="${upper_length} ${upper_width} ${upper_height}"/>
         </geometry>
       </collision>
       <visual>
-        <origin xyz="${upper_height/2} 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <box size="${upper_height} ${upper_width} ${upper_width}"/>
+          <mesh filename="file://$(find my_second_delta)/meshes/Brazo.stl" scale="0.001 0.001 0.001"/>
         </geometry>
-        <material name="black">
-          <color rgba="0.0 0.0 0.0 1.0"/>
+        <material name="grey">
+          
         </material>
       </visual>
-      <inertial>
-        <origin xyz="0 0 ${upper_height/2}" rpy="0 0 0"/>
-        <mass value="${mass}"/>
-        <inertia
-          ixx="${mass / 12.0 * (upper_width*upper_width + upper_width*upper_width)}" ixy="0.0" ixz="0.0"
-          iyy="${mass / 12.0 * (upper_height*upper_height + upper_width*upper_width)}" iyz="0.0"
-          izz="${mass / 12.0 * (upper_height*upper_height + upper_width*upper_width)}"/>
-      </inertial>
+      <xacro:inertial_box mass="${mass}" x="${upper_length}" y="${upper_width}" z="${upper_height}">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </xacro:inertial_box>
     </link>
 
     <joint name="${prefix}upper_joint" type="continuous">
       <parent link="${prefix}upper_link"/>
       <child link="${prefix}lower_top_link"/>
-      <origin xyz="${upper_height} 0 0" rpy="0 ${elbow_angle} 0"/>
+      <origin xyz="${upper_length} 0 0" rpy="0 ${elbow_angle} 0"/>
       <axis xyz="0 1 0"/>
     </joint>
 

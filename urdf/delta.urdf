@@ -5,7 +5,6 @@
 <!-- =================================================================================== -->
 <!-- Revolute-Revolute Manipulator -->
 <robot name="delta">
-  <!-- base and end links -->
   <!-- Upper link -->
   <physics type="ode">
     <max_step_size>0.001</max_step_size>
@@ -93,13 +92,13 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.05" radius="0.1"/>
+        <cylinder length="0.0127" radius="0.111"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.05" radius="0.1"/>
+        <cylinder length="0.0127" radius="0.111"/>
       </geometry>
       <material name="orange">
         <color rgba="1.0 0.4235294117647059 0.0392156862745098 1.0"/>
@@ -392,10 +391,10 @@
   <joint name="front_delta_arm_joint" type="revolute">
     <parent link="base_link"/>
     <child link="front_upper_link"/>
-    <origin rpy="0 0 0" xyz="0.1 0 0"/>
+    <origin rpy="0 0 0" xyz="0.12 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7"/>
-    <limit effort="6" lower="-1.0471975511965976" upper="1.0471975511965976" velocity="8"/>
+    <limit effort="6" lower="-0.3490658503988659" upper="1.5707963267948966" velocity="8"/>
   </joint>
   <link name="right_upper_link">
     <collision>
@@ -678,10 +677,10 @@
   <joint name="right_delta_arm_joint" type="revolute">
     <parent link="base_link"/>
     <child link="right_upper_link"/>
-    <origin rpy="0 0 -2.0943951023931953" xyz="-0.05 -0.0866 0"/>
+    <origin rpy="0 0 -2.0943951023931953" xyz="-0.06 -0.1039 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7"/>
-    <limit effort="6" lower="-1.0471975511965976" upper="1.0471975511965976" velocity="8"/>
+    <limit effort="6" lower="-0.3490658503988659" upper="1.5707963267948966" velocity="8"/>
   </joint>
   <link name="left_upper_link">
     <collision>
@@ -964,22 +963,22 @@
   <joint name="left_delta_arm_joint" type="revolute">
     <parent link="base_link"/>
     <child link="left_upper_link"/>
-    <origin rpy="0 0 2.0943951023931953" xyz="-0.05 0.0866 0"/>
+    <origin rpy="0 0 2.0943951023931953" xyz="-0.06 0.1039 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7"/>
-    <limit effort="6" lower="-1.0471975511965976" upper="1.0471975511965976" velocity="8"/>
+    <limit effort="6" lower="-0.3490658503988659" upper="1.5707963267948966" velocity="8"/>
   </joint>
   <link name="end_link">
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.0125" radius="0.025"/>
+        <cylinder length="0.00635" radius="0.05"/>
       </geometry>
     </collision>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.0125" radius="0.025"/>
+        <cylinder length="0.00635" radius="0.05"/>
       </geometry>
       <material name="orange">
         <color rgba="1.0 0.4235294117647059 0.0392156862745098 1.0"/>

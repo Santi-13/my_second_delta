@@ -21,7 +21,7 @@
   </gazebo>
 
   <gazebo reference="end_link">
-    <material>Gazebo/Orange</material>
+    <material>Gazebo/Black</material>
     <selfCollide>false</selfCollide>
   </gazebo>
 
@@ -58,7 +58,7 @@
 
   <xacro:macro name="delta_arm_gazebo" params="prefix">
     <gazebo reference="${prefix}upper_link">
-      <material>Gazebo/Black</material>
+      <material>Gazebo/Grey</material>
       <selfCollide>false</selfCollide>
     </gazebo>
     <gazebo reference="${prefix}lower_top_link">
@@ -78,7 +78,7 @@
       <selfCollide>false</selfCollide>
     </gazebo>
     <gazebo reference="${prefix}lower_end_link">
-      <material>Gazebo/Black</material>
+      <material>Gazebo/Red</material>
       <selfCollide>false</selfCollide>
     </gazebo>
 
@@ -146,6 +146,17 @@
 
   <material name="black">
     <color rgba="0.0 0.0 0.0 1.0"/>
+    <script>
+      <uri>file://media/materials/scripts/gazebo.material</uri>
+      <name>Gazebo/Black</name>
+    </script>
+    <shader type='pixel'>
+      <normal_map>__default__</normal_map>
+    </shader>
+    <ambient>0.3 0.3 0.3 1</ambient>
+    <diffuse>0.7 0.7 0.7 1</diffuse>
+    <specular>0.01 0.01 0.01 1</specular>
+    <emissive>0 0 0 1</emissive>
   </material>
 
   <material name="blue">
@@ -158,6 +169,17 @@
 
   <material name="grey">
     <color rgba="0.2 0.2 0.2 1.0"/>
+    <script>
+      <uri>file://media/materials/scripts/gazebo.material</uri>
+      <name>Gazebo/Red</name>
+    </script>
+    <shader type='pixel'>
+      <normal_map>__default__</normal_map>
+    </shader>
+    <ambient>0.3 0.3 0.3 1</ambient>
+    <diffuse>0.7 0.7 0.7 1</diffuse>
+    <specular>0.01 0.01 0.01 1</specular>
+    <emissive>0 0 0 1</emissive>
   </material>
 
   <material name="orange">
@@ -170,6 +192,17 @@
 
   <material name="red">
     <color rgba="0.8 0.0 0.0 1.0"/>
+    <script>
+      <uri>file://media/materials/scripts/gazebo.material</uri>
+      <name>Gazebo/Red</name>
+    </script>
+    <shader type='pixel'>
+      <normal_map>__default__</normal_map>
+    </shader>
+    <ambient>0.3 0.3 0.3 1</ambient>
+    <diffuse>0.7 0.7 0.7 1</diffuse>
+    <specular>0.01 0.01 0.01 1</specular>
+    <emissive>0 0 0 1</emissive>
   </material>
 
   <material name="white">

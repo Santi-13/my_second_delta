@@ -12,6 +12,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/launch_delta.py']),
         ('share/' + package_name + '/urdf', ['urdf/delta.urdf.xacro', 'urdf/macros.xacro', 'urdf/gazebo_stuff.xacro', 'urdf/delta.urdf']),
+        ('share/' + package_name + '/meshes', ['meshes/Base_Fija.stl', 'meshes/Brazo.stl', 'meshes/Base_Movil.stl']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
