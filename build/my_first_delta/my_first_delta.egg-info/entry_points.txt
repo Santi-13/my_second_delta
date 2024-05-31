@@ -1,0 +1,7 @@
+[console_scripts]
+excel_publisher = my_first_delta.excel_publisher:main
+get_user_input = my_first_delta.get_user_input:main
+inverse_kinematics_client = my_first_delta.inverse_kinematics_client:main
+inverse_kinematics_server = my_first_delta.inverse_kinematics_server:main
+joint_publisher = my_first_delta.joint_publisher:main
+

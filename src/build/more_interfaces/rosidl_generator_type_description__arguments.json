@@ -1,0 +1,11 @@
+{
+  "package_name": "more_interfaces",
+  "output_dir": "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/build/more_interfaces/rosidl_generator_type_description/more_interfaces",
+  "idl_tuples": [
+    "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/build/more_interfaces/rosidl_adapter/more_interfaces:srv/DeltaTheta.idl"
+  ],
+  "include_paths": [
+    "service_msgs:/opt/ros/iron/share/service_msgs",
+    "builtin_interfaces:/opt/ros/iron/share/builtin_interfaces"
+  ]
+}

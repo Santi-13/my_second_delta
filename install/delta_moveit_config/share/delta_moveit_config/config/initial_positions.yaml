@@ -1,0 +1,6 @@
+# Default initial positions for delta's ros2_control fake system
+
+initial_positions:
+  arm_1_delta_joint: 0
+  arm_2_delta_joint: 0
+  arm_3_delta_joint: 0

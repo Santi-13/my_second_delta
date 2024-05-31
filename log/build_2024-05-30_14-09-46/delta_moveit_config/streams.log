@@ -1,0 +1,43 @@
+[0.007s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config -- -j12 -l12
+[0.040s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config -- -j12 -l12
+[0.061s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config
+[0.068s] -- Install configuration: ""
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/ament_index/resource_index/package_run_dependencies/delta_moveit_config
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/ament_index/resource_index/parent_prefix_path/delta_moveit_config
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/environment/ament_prefix_path.sh
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/environment/ament_prefix_path.dsv
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/environment/path.sh
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/environment/path.dsv
+[0.068s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/local_setup.bash
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/local_setup.sh
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/local_setup.zsh
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/local_setup.dsv
+[0.069s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.dsv
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/ament_index/resource_index/packages/delta_moveit_config
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/cmake/delta_moveit_configConfig.cmake
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/cmake/delta_moveit_configConfig-version.cmake
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.xml
+[0.069s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/move_group.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/demo.launch.py
+[0.070s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/rviz.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/launch_delta.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/warehouse_db.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/rsp.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/setup_assistant.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/spawn_controllers.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/static_virtual_joint_tfs.launch.py
+[0.070s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/launch/moveit_rviz.launch.py
+[0.071s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config
+[0.071s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/initial_positions.yaml
+[0.071s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/joint_limits.yaml
+[0.071s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/kinematics.yaml
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/delta.srdf
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/moveit.rviz
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/delta.urdf.xacro
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/pilz_cartesian_limits.yaml
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/delta.ros2_control.xacro
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/ros2_controllers.yaml
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/config/moveit_controllers.yaml
+[0.073s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/.setup_assistant
+[0.074s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config

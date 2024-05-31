@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="delta">
+
+    <xacro:property name="PI" value="3.1415926535897931"/>
+    <xacro:property name="inch" value="0.0254"/>
+    <xacro:property name="base_radius" value="0.111" /> <!-- Square dimensions (widthxwidth) of beams -->
+    <xacro:property name="base_height" value="${inch/2}" /> <!-- base and end links -->
+
+    <xacro:include filename="macros.xacro"/>
+    <!-- Include gazebo plugins -->
+    <xacro:include filename="gazebo_stuff.xacro" />
+
+    <!-- Base of the robot -->
+    <link name="world"/>    
+
+    <joint name="world_base_joint" type="fixed">
+        <origin xyz="1 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${base_radius}" length="${base_height}"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <cylinder radius="${base_radius}" length="${base_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="12" length="${base_height}" radius="${base_radius}">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <xacro:delta_arm prefix="1"/>
+
+    <joint name="arm_1_delta_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="arm_1_link"/>
+        <origin xyz="${base_radius} 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <axis xyz="0.0 1 0.0"/>
+        <dynamics damping="0.7"/> 
+        <limit lower="${-20*PI/180}" upper="${90*PI/180}" effort="6" velocity="8"/>
+    </joint>
+
+    <xacro:delta_arm prefix="2"/>
+
+    <joint name="arm_2_delta_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="arm_2_link"/>
+        <origin xyz="-0.0555 -0.09612 0.0" rpy="0.0 0.0 ${-120*PI/180}"/>
+        <axis xyz="0.0 1 0.0"/>
+        <dynamics damping="0.7"/> 
+        <limit lower="${-20*PI/180}" upper="${90*PI/180}" effort="6" velocity="8"/>
+    </joint>
+
+    <xacro:delta_arm prefix="3"/>
+
+    <joint name="arm_3_delta_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="arm_3_link"/>
+        <origin xyz="-0.0555 0.09612 0.0" rpy="0.0 0.0 ${120*PI/180}"/>
+        <axis xyz="0.0 1 0.0"/>
+        <dynamics damping="0.7"/> 
+        <limit lower="${-20*PI/180}" upper="${90*PI/180}" effort="6" velocity="8"/>
+    </joint>
+
+</robot>

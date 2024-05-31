@@ -1,0 +1,4 @@
+/joint_states:
+  history: KEEP_LAST
+  depth: 10
+

@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="base">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.0127" radius="0.111"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <link name="arm_1_link">
+    <visual>
+      <geometry>
+        <box size="0.185 0.00635 0.043"/>
+      </geometry>
+      <origin xyz="-0.09 0.0 0.0"/>
+    </visual>
+  </link>
+
+  <link name="arm_2_link">
+    <visual>
+      <geometry>
+        <box size="0.185 0.00635 0.043"/>
+      </geometry>
+      <origin xyz="-0.09 0.0 0.0" />
+    </visual>
+  </link>
+
+  <link name="arm_3_link">
+    <visual>
+      <geometry>
+        <box size="0.185 0.00635 0.043"/>
+      </geometry>
+      <origin xyz="-0.09 0.0 0.0" />
+    </visual>
+  </link>
+
+  <joint name="base_to_arm_1" type="continuous">
+    <parent link="base_link"/>
+    <child link="arm_1_link"/>
+    <axis xyz="0.0 1 0.0"/>
+    <origin xyz="-0.111 0 0"/>
+  </joint>
+
+  <joint name="base_to_arm_2" type="continuous">
+    <parent link="base_link"/>
+    <child link="arm_2_link"/>
+    <axis xyz="0.0 1 0.0"/>
+    <origin xyz="0.0555 -0.096 0" rpy="0 0 2.0943"/>
+  </joint>
+
+  <joint name="base_to_arm_3" type="continuous">
+    <parent link="base_link"/>
+    <child link="arm_3_link"/>
+    <axis xyz="0.0 1 0.0"/>
+    <origin xyz="0.0555 0.096 0" rpy="0 0 4.1887"/>
+  </joint>
+
+  <!-- Forearm 1 -->
+  <link name="forearm_1_link">
+    <visual>
+      <geometry>
+        <box size="0.00635 0.00635 0.350"/>
+      </geometry>
+      <origin xyz="0.0 0.0 -0.175" />
+    </visual>
+  </link>
+
+  <link name="virtual_link_1_1"/>
+  <link name="virtual_link_1_2"/>
+  <link name="virtual_link_1_4"/>
+  <link name="virtual_link_1_5"/>
+
+  <joint name="virtual_joint_1_1" type="continuous">
+    <parent link="arm_1_link"/>
+    <child link="virtual_link_1_1"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.185 0 0" rpy="0 3.1415 0"/>
+  </joint>
+
+  <joint name="virtual_joint_1_2" type="continuous">
+    <parent link="virtual_link_1_1"/>
+    <child link="virtual_link_1_2"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="virtual_joint_1_3" type="continuous">
+    <parent link="virtual_link_1_2"/>
+    <child link="forearm_1_link"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="virtual_joint_1_4" type="continuous">
+    <parent link="forearm_1_link"/>
+    <child link="virtual_link_1_4"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 -0.350"/>
+  </joint>
+
+  <joint name="virtual_joint_1_5" type="continuous">
+    <parent link="virtual_link_1_4"/>
+    <child link="virtual_link_1_5"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Forearm 2 -->
+  <link name="forearm_2_link">
+    <visual>
+      <geometry>
+        <box size="0.00635 0.00635 0.350"/>
+      </geometry>
+      <origin xyz="0.0 0.0 -0.175" />
+    </visual>
+  </link>
+
+  <link name="virtual_link_2_1"/>
+  <link name="virtual_link_2_2"/>
+  <link name="virtual_link_2_4"/>
+  <link name="virtual_link_2_5"/>
+
+  <joint name="virtual_joint_2_1" type="continuous">
+    <parent link="arm_2_link"/>
+    <child link="virtual_link_2_1"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.185 0 0" rpy="0 3.1415 0"/>
+  </joint>
+
+  <joint name="virtual_joint_2_2" type="continuous">
+    <parent link="virtual_link_2_1"/>
+    <child link="virtual_link_2_2"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="virtual_joint_2_3" type="continuous">
+    <parent link="virtual_link_2_2"/>
+    <child link="forearm_2_link"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="virtual_joint_2_4" type="continuous">
+    <parent link="forearm_2_link"/>
+    <child link="virtual_link_2_4"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 -0.350"/>
+  </joint>
+
+  <joint name="virtual_joint_2_5" type="continuous">
+    <parent link="virtual_link_2_4"/>
+    <child link="virtual_link_2_5"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Forearm 3 -->
+  <link name="forearm_3_link">
+    <visual>
+      <geometry>
+        <box size="0.00635 0.00635 0.350"/>
+      </geometry>
+      <origin xyz="0.0 0.0 -0.175" />
+    </visual>
+  </link>
+
+  <link name="virtual_link_3_1"/>
+  <link name="virtual_link_3_2"/>
+  <link name="virtual_link_3_4"/>
+  <link name="virtual_link_3_5"/>
+
+  <joint name="virtual_joint_3_1" type="continuous">
+    <parent link="arm_3_link"/>
+    <child link="virtual_link_3_1"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.185 0 0" rpy="0 3.1415 0"/>
+  </joint>
+
+  <joint name="virtual_joint_3_2" type="continuous">
+    <parent link="virtual_link_3_1"/>
+    <child link="virtual_link_3_2"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <joint name="virtual_joint_3_3" type="continuous">
+    <parent link="virtual_link_3_2"/>
+    <child link="forearm_3_link"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <joint name="virtual_joint_3_4" type="continuous">
+    <parent link="forearm_3_link"/>
+    <child link="virtual_link_3_4"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 -0.350"/>
+  </joint>
+
+  <joint name="virtual_joint_3_5" type="continuous">
+    <parent link="virtual_link_3_4"/>
+    <child link="virtual_link_3_5"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Mobile Platform -->
+  <link name="mobile_platform">
+    <visual>
+      <geometry>
+        <cylinder length="0.00635" radius="0.0345"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" />
+    </visual>
+  </link>
+
+  <!-- Virtual links for mobile platform -->
+  <link name="virtual_link_1_6"/>
+  <link name="virtual_link_2_6"/>
+  <link name="virtual_link_3_6"/>
+
+  <joint name="virtual_joint_1_6" type="continuous">
+    <parent link="virtual_link_1_5"/>
+    <child link="virtual_link_1_6"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="-0.0345 0 0"/>
+  </joint>
+
+  <joint name="virtual_joint_2_6" type="continuous">
+    <parent link="virtual_link_2_5"/>
+    <child link="virtual_link_2_6"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="-0.0345 0 0"/>
+  </joint>
+
+  <joint name="virtual_joint_3_6" type="continuous">
+    <parent link="virtual_link_3_5"/>
+    <child link="virtual_link_3_6"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="-0.0345 0 0"/>
+  </joint>
+
+  <!-- Joints to mobile platform -->
+  <joint name="platform_joint_1" type="fixed">
+    <parent link="virtual_link_1_6"/>
+    <child link="mobile_platform"/>
+  </joint>
+
+  <joint name="platform_joint_2" type="fixed">
+    <parent link="virtual_link_2_6"/>
+    <child link="mobile_platform"/>
+  </joint>
+
+  <joint name="platform_joint_3" type="fixed">
+    <parent link="virtual_link_3_6"/>
+    <child link="mobile_platform"/>
+  </joint>
+  
+</robot>

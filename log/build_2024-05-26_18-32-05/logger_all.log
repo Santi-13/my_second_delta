@@ -1,0 +1,202 @@
+[0.103s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--executor', 'sequential']
+[0.103s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='sequential', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x76551f839330>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76551f8380a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76551f8380a0>>)
+[0.292s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.293s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['ignore', 'ignore_ament_install']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'ignore'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'ignore_ament_install'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['colcon_pkg']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'colcon_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'ros'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['cmake', 'python']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'cmake'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'python'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['python_setup_py']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'python_setup_py'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'ros'
+[0.311s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_first_delta' with type 'ros.ament_python' and name 'my_first_delta'
+[0.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.343s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 323 installed packages in /opt/ros/iron
+[0.345s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_args' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_target' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_clean_cache' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_clean_first' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_force_configure' from command line to 'False'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'ament_cmake_args' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'catkin_cmake_args' from command line to 'None'
+[0.399s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.399s] DEBUG:colcon.colcon_core.verb:Building package 'my_first_delta' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta', 'merge_install': False, 'path': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta', 'symlink_install': False, 'test_result_base': None}
+[0.399s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.400s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_first_delta'
+[0.401s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta' with build type 'ament_python'
+[0.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_first_delta', 'ament_prefix_path')
+[0.403s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/ament_prefix_path.ps1'
+[0.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/ament_prefix_path.dsv'
+[0.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/ament_prefix_path.sh'
+[0.405s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.405s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.681s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta'
+[0.682s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.682s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.834s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_first_delta' was interrupted
+[0.834s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_first_delta' again
+[0.851s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[0.851s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[0.852s] ERROR:colcon.colcon_core.executor:Exception in executor extension 'sequential': Expected ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', '--help-commands'] to pass: Traceback (most recent call last):
+  File "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta/setup.py", line 1, in <module>
+    from setuptools import find_packages, setup
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3267, in <module>
+    def _initialize_master_working_set():
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3241, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3279, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 564, in _build_master
+    ws = cls()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 557, in __init__
+    self.add_entry(entry)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 614, in add_entry
+    self.add(dist, entry, False)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 701, in add
+    if dist.key not in keys2:
+KeyboardInterrupt
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/sequential.py", line 48, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 332, in execute_jobs
+    rc = func(context.args, jobs, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/sequential.py", line 59, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build
+    return await extension.build(additional_hooks=additional_hooks)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 90, in build
+    available_commands = await self._get_available_commands(
+  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 188, in _get_available_commands
+    output = await check_output(
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', '--help-commands'] to pass: Traceback (most recent call last):
+  File "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta/setup.py", line 1, in <module>
+    from setuptools import find_packages, setup
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 16, in <module>
+    import setuptools.version
+  File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+    import pkg_resources
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3267, in <module>
+    def _initialize_master_working_set():
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3241, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3279, in _initialize_master_working_set
+    working_set = WorkingSet._build_master()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 564, in _build_master
+    ws = cls()
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 557, in __init__
+    self.add_entry(entry)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 614, in add_entry
+    self.add(dist, entry, False)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 701, in add
+    if dist.key not in keys2:
+KeyboardInterrupt
+
+
+[0.852s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.858s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.858s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.858s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.869s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.869s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.ps1'
+[0.870s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/_local_setup_util_ps1.py'
+[0.871s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.ps1'
+[0.871s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.sh'
+[0.872s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/_local_setup_util_sh.py'
+[0.872s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.sh'
+[0.873s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.bash'
+[0.873s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.bash'
+[0.874s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.zsh'
+[0.874s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.zsh'

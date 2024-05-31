@@ -1,0 +1,32 @@
+running egg_info
+creating ../../build/my_second_delta/my_second_delta.egg-info
+writing ../../build/my_second_delta/my_second_delta.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_second_delta/my_second_delta.egg-info/dependency_links.txt
+writing entry points to ../../build/my_second_delta/my_second_delta.egg-info/entry_points.txt
+writing requirements to ../../build/my_second_delta/my_second_delta.egg-info/requires.txt
+writing top-level names to ../../build/my_second_delta/my_second_delta.egg-info/top_level.txt
+writing manifest file '../../build/my_second_delta/my_second_delta.egg-info/SOURCES.txt'
+reading manifest file '../../build/my_second_delta/my_second_delta.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/my_second_delta/my_second_delta.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build/lib
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build/lib/my_second_delta
+copying my_second_delta/__init__.py -> /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build/lib/my_second_delta
+running install
+running install_lib
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages/my_second_delta
+copying /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build/lib/my_second_delta/__init__.py -> /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages/my_second_delta
+byte-compiling /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages/my_second_delta/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/ament_index
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/ament_index/resource_index
+creating /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/ament_index/resource_index/packages
+copying resource/my_second_delta -> /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/ament_index/resource_index/packages
+copying package.xml -> /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta
+running install_egg_info
+Copying ../../build/my_second_delta/my_second_delta.egg-info to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages/my_second_delta-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/install.log'

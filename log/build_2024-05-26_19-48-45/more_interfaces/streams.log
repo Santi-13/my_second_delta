@@ -1,0 +1,17 @@
+[0.008s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces
+[0.020s] -- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.152s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.154s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.184s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.211s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.454s] [31mCMake Error at /opt/ros/iron/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:259 (message):
+[0.454s]   Packages installing interfaces must include
+[0.454s]   '<member_of_group>rosidl_interface_packages</member_of_group>' in their
+[0.454s]   package.xml
+[0.454s] Call Stack (most recent call first):
+[0.454s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[0.454s] 
+[0.454s] [0m
+[0.454s] -- Configuring incomplete, errors occurred!
+[0.454s] See also "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces/CMakeFiles/CMakeOutput.log".
+[0.460s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces' returned '1': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces

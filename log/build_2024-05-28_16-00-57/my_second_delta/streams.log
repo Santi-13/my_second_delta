@@ -1,0 +1,21 @@
+[0.584s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_second_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/install.log --single-version-externally-managed install_data
+[0.813s] running egg_info
+[0.814s] writing ../../build/my_second_delta/my_second_delta.egg-info/PKG-INFO
+[0.814s] writing dependency_links to ../../build/my_second_delta/my_second_delta.egg-info/dependency_links.txt
+[0.814s] writing entry points to ../../build/my_second_delta/my_second_delta.egg-info/entry_points.txt
+[0.814s] writing requirements to ../../build/my_second_delta/my_second_delta.egg-info/requires.txt
+[0.814s] writing top-level names to ../../build/my_second_delta/my_second_delta.egg-info/top_level.txt
+[0.816s] reading manifest file '../../build/my_second_delta/my_second_delta.egg-info/SOURCES.txt'
+[0.816s] adding license file 'LICENSE'
+[0.817s] writing manifest file '../../build/my_second_delta/my_second_delta.egg-info/SOURCES.txt'
+[0.817s] running build
+[0.817s] running build_py
+[0.817s] running install
+[0.817s] running install_lib
+[0.818s] running install_data
+[0.818s] running install_egg_info
+[0.820s] removing '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages/my_second_delta-0.0.0-py3.10.egg-info' (and everything under it)
+[0.820s] Copying ../../build/my_second_delta/my_second_delta.egg-info to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages/my_second_delta-0.0.0-py3.10.egg-info
+[0.821s] running install_scripts
+[0.840s] writing list of installed files to '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/install.log'
+[0.858s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta' returned '0': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_second_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/install.log --single-version-externally-managed install_data

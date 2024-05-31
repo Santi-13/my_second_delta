@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: my_third_delta
+    relative_path: urdf/delta.urdf
+  srdf:
+    relative_path: config/delta.srdf
+  package_settings:
+    author_name: sanmaster
+    author_email: s.penunuri@hotmail.com
+    generated_timestamp: 1717099515
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

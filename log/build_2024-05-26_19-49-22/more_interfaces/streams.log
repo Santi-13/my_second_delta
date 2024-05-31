@@ -1,0 +1,225 @@
+[0.009s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces
+[0.020s] -- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.143s] -- Found rosidl_default_generators: 1.5.0 (/opt/ros/iron/share/rosidl_default_generators/cmake)
+[0.145s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.175s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.203s] -- Found rosidl_adapter: 4.0.1 (/opt/ros/iron/share/rosidl_adapter/cmake)
+[0.544s] -- Found ament_cmake_ros: 0.11.2 (/opt/ros/iron/share/ament_cmake_ros/cmake)
+[0.712s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.928s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.949s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.952s] -- Found python_cmake_module: 0.10.2 (/opt/ros/iron/share/python_cmake_module/cmake)
+[0.976s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.976s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.977s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.977s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.995s] -- Found PythonExtra: .so  
+[1.030s] -- Found ament_lint_auto: 0.14.3 (/opt/ros/iron/share/ament_lint_auto/cmake)
+[1.058s] -- Added test 'lint_cmake' to check CMake code style
+[1.061s] -- Added test 'xmllint' to check XML markup files
+[1.065s] -- Configuring done
+[1.116s] -- Generating done
+[1.119s] -- Build files have been written to: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces
+[1.127s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces -DCMAKE_INSTALL_PREFIX=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces
+[1.128s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces -- -j12 -l12
+[1.171s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[1.178s] [  2%] Built target ament_cmake_python_copy_more_interfaces
+[1.363s] [  2%] Built target more_interfaces__rosidl_generator_type_description
+[1.373s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.383s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.449s] running egg_info
+[1.450s] creating more_interfaces.egg-info
+[1.450s] writing more_interfaces.egg-info/PKG-INFO
+[1.451s] writing dependency_links to more_interfaces.egg-info/dependency_links.txt
+[1.451s] writing top-level names to more_interfaces.egg-info/top_level.txt
+[1.451s] writing manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.454s] reading manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.454s] writing manifest file 'more_interfaces.egg-info/SOURCES.txt'
+[1.481s] [  8%] Built target ament_cmake_python_build_more_interfaces_egg
+[1.700s] [  8%] Built target more_interfaces__cpp
+[1.724s] [ 17%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_generator_c.dir/rosidl_generator_c/more_interfaces/srv/detail/delta_theta__functions.c.o[0m
+[1.724s] [ 17%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_generator_c.dir/rosidl_generator_c/more_interfaces/srv/detail/delta_theta__type_support.c.o[0m
+[1.725s] [ 17%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_generator_c.dir/rosidl_generator_c/more_interfaces/srv/detail/delta_theta__description.c.o[0m
+[1.809s] [ 20%] [32m[1mLinking C shared library libmore_interfaces__rosidl_generator_c.so[0m
+[1.845s] [ 20%] Built target more_interfaces__rosidl_generator_c
+[1.854s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.854s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.855s] [ 29%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.855s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.855s] [ 35%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.855s] [ 38%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.151s] [ 41%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/more_interfaces/srv/delta_theta__type_support.cpp.o[0m
+[2.163s] [ 44%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/more_interfaces/srv/delta_theta__type_support.cpp.o[0m
+[2.208s] [ 47%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/more_interfaces/srv/detail/delta_theta__type_support.c.o[0m
+[2.220s] [ 50%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_c.so[0m
+[2.224s] [ 52%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/more_interfaces/srv/detail/dds_fastrtps/delta_theta__type_support.cpp.o[0m
+[2.252s] [ 55%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/more_interfaces/srv/detail/delta_theta__type_support.cpp.o[0m
+[2.271s] [ 58%] [32m[1mLinking C shared library libmore_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.271s] [ 58%] Built target more_interfaces__rosidl_typesupport_c
+[2.303s] [ 61%] [32mBuilding CXX object CMakeFiles/more_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/more_interfaces/srv/detail/delta_theta__type_support_c.cpp.o[0m
+[2.310s] [ 61%] Built target more_interfaces__rosidl_typesupport_introspection_c
+[2.719s] [ 64%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.756s] [ 67%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_cpp.so[0m
+[2.818s] [ 67%] Built target more_interfaces__rosidl_typesupport_fastrtps_c
+[2.826s] [ 70%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.853s] [ 70%] Built target more_interfaces__rosidl_typesupport_cpp
+[2.922s] [ 70%] Built target more_interfaces__rosidl_typesupport_introspection_cpp
+[3.000s] [ 73%] [32m[1mLinking CXX shared library libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.069s] [ 73%] Built target more_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.086s] [ 73%] Built target more_interfaces
+[3.105s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.547s] [ 76%] Built target more_interfaces__py
+[3.565s] [ 79%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_generator_py.dir/rosidl_generator_py/more_interfaces/srv/_delta_theta_s.c.o[0m
+[3.716s] [ 82%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/libmore_interfaces__rosidl_generator_py.so[0m
+[3.754s] [ 82%] Built target more_interfaces__rosidl_generator_py
+[3.772s] [ 91%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.772s] [ 91%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.772s] [ 91%] [32mBuilding C object CMakeFiles/more_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.890s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.890s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.890s] [100%] [32m[1mLinking C shared library rosidl_generator_py/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.930s] [100%] Built target more_interfaces__rosidl_typesupport_c__pyext
+[3.930s] [100%] Built target more_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.930s] [100%] Built target more_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.941s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces -- -j12 -l12
+[4.009s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces
+[4.016s] -- Install configuration: ""
+[4.016s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/ament_index/resource_index/rosidl_interfaces/more_interfaces
+[4.016s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/srv/DeltaTheta.json
+[4.016s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/delta_theta.h
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__struct.h
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__type_support.h
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__description.c
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__functions.h
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__functions.c
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__type_support.c
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg
+[4.017s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.018s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/library_path.sh
+[4.018s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/library_path.dsv
+[4.018s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so
+[4.018s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_c.so" to ""
+[4.019s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces
+[4.019s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv
+[4.019s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail
+[4.019s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__rosidl_typesupport_fastrtps_c.h
+[4.019s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg
+[4.019s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.019s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.019s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.019s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces
+[4.019s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv
+[4.020s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail
+[4.020s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__rosidl_typesupport_introspection_c.h
+[4.020s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__type_support.c
+[4.020s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg
+[4.020s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.020s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so
+[4.020s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.020s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so
+[4.020s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_c.so" to ""
+[4.021s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces
+[4.021s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv
+[4.021s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail
+[4.021s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__struct.hpp
+[4.021s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__builder.hpp
+[4.021s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__traits.hpp
+[4.021s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/delta_theta.hpp
+[4.021s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces
+[4.021s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv
+[4.021s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail
+[4.021s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__rosidl_typesupport_fastrtps_cpp.hpp
+[4.021s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/dds_fastrtps
+[4.022s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg
+[4.022s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.022s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.022s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.022s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces
+[4.022s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv
+[4.022s] -- Up-to-date: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail
+[4.022s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__rosidl_typesupport_introspection_cpp.hpp
+[4.022s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/include/more_interfaces/more_interfaces/srv/detail/delta_theta__type_support.cpp
+[4.022s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.023s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.023s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so
+[4.024s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/pythonpath.sh
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/pythonpath.dsv
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces-0.0.0-py3.10.egg-info
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[4.024s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_c.c
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv/_delta_theta_s.c
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv/__init__.py
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv/_delta_theta.py
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/__init__.py
+[4.025s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/libmore_interfaces__rosidl_generator_py.so
+[4.026s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.026s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/_more_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.026s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.059s] Listing '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces'...
+[4.059s] Compiling '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/__init__.py'...
+[4.060s] Listing '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv'...
+[4.060s] Compiling '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv/__init__.py'...
+[4.060s] Compiling '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/srv/_delta_theta.py'...
+[4.064s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.064s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.065s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.065s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.065s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.065s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages/more_interfaces/more_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[4.066s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_py.so
+[4.066s] -- Set runtime path of "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/libmore_interfaces__rosidl_generator_py.so" to ""
+[4.066s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/srv/DeltaTheta.idl
+[4.066s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/srv/DeltaTheta.srv
+[4.066s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/srv/DeltaTheta_Request.msg
+[4.066s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/srv/DeltaTheta_Response.msg
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/ament_index/resource_index/package_run_dependencies/more_interfaces
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/ament_index/resource_index/parent_prefix_path/more_interfaces
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.sh
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/ament_prefix_path.dsv
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/path.sh
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/environment/path.dsv
+[4.067s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/local_setup.bash
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/local_setup.sh
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/local_setup.zsh
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/local_setup.dsv
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.dsv
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/ament_index/resource_index/packages/more_interfaces
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cExport.cmake
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.068s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.069s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.069s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.069s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.069s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport.cmake
+[4.069s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.070s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_cppExport.cmake
+[4.070s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.070s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.070s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.071s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.071s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport.cmake
+[4.071s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.071s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_pyExport.cmake
+[4.072s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/export_more_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.072s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.072s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.072s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.072s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.073s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.073s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.073s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.073s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig.cmake
+[4.073s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/cmake/more_interfacesConfig-version.cmake
+[4.073s] -- Installing: /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.xml
+[4.076s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces

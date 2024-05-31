@@ -1,0 +1,6 @@
+{
+  "package_name": "more_interfaces",
+  "non_idl_tuples": [
+    "/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces:srv/DeltaTheta.srv"
+  ]
+}

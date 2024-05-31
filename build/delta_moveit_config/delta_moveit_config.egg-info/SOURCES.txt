@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/delta_moveit_config/delta_moveit_config.egg-info/PKG-INFO
+../../build/delta_moveit_config/delta_moveit_config.egg-info/SOURCES.txt
+../../build/delta_moveit_config/delta_moveit_config.egg-info/dependency_links.txt
+../../build/delta_moveit_config/delta_moveit_config.egg-info/entry_points.txt
+../../build/delta_moveit_config/delta_moveit_config.egg-info/requires.txt
+../../build/delta_moveit_config/delta_moveit_config.egg-info/top_level.txt
+../../build/delta_moveit_config/delta_moveit_config.egg-info/zip-safe
+delta_moveit_config/__init__.py
+resource/delta_moveit_config
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,28 @@
+[0.667s] Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_first_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/install.log --single-version-externally-managed install_data
+[0.947s] running egg_info
+[0.948s] writing ../../build/my_first_delta/my_first_delta.egg-info/PKG-INFO
+[0.948s] writing dependency_links to ../../build/my_first_delta/my_first_delta.egg-info/dependency_links.txt
+[0.949s] writing entry points to ../../build/my_first_delta/my_first_delta.egg-info/entry_points.txt
+[0.949s] writing requirements to ../../build/my_first_delta/my_first_delta.egg-info/requires.txt
+[0.949s] writing top-level names to ../../build/my_first_delta/my_first_delta.egg-info/top_level.txt
+[0.951s] reading manifest file '../../build/my_first_delta/my_first_delta.egg-info/SOURCES.txt'
+[0.951s] adding license file 'LICENSE'
+[0.952s] writing manifest file '../../build/my_first_delta/my_first_delta.egg-info/SOURCES.txt'
+[0.952s] running build
+[0.952s] running build_py
+[0.952s] copying my_first_delta/joint_publisher.py -> /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/build/lib/my_first_delta
+[0.952s] running install
+[0.953s] running install_lib
+[0.954s] copying /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/build/lib/my_first_delta/joint_publisher.py -> /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages/my_first_delta
+[0.954s] byte-compiling /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages/my_first_delta/joint_publisher.py to joint_publisher.cpython-310.pyc
+[0.955s] running install_data
+[0.955s] running install_egg_info
+[0.957s] removing '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages/my_first_delta-0.0.0-py3.10.egg-info' (and everything under it)
+[0.957s] Copying ../../build/my_first_delta/my_first_delta.egg-info to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages/my_first_delta-0.0.0-py3.10.egg-info
+[0.958s] running install_scripts
+[0.982s] Installing get_user_input script to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/my_first_delta
+[0.982s] Installing inverse_kinematics_client script to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/my_first_delta
+[0.982s] Installing inverse_kinematics_server script to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/my_first_delta
+[0.982s] Installing joint_publisher script to /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/my_first_delta
+[0.982s] writing list of installed files to '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/install.log'
+[1.005s] Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta' returned '0': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_first_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/install.log --single-version-externally-managed install_data

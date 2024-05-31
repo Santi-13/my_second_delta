@@ -1,0 +1,399 @@
+[0.142s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--executor', 'sequential']
+[0.142s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='sequential', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x735feb42fd90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x735feb578520>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x735feb578520>>, mixin_verb=('build',))
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.354s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.354s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'ignore_ament_install'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['colcon_pkg']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'colcon_pkg'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'colcon_meta'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['ros']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'ros'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['cmake', 'python']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'cmake'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'python'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extensions ['python_setup_py']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(rosbag2_2024_05_26-16_18_09) by extension 'python_setup_py'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.375s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extension 'ignore'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extension 'ignore_ament_install'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extensions ['colcon_pkg']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extension 'colcon_pkg'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extensions ['colcon_meta']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extension 'colcon_meta'
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extensions ['ros']
+[0.376s] Level 1:colcon.colcon_core.package_identification:_identify(src/delta_moveit_config) by extension 'ros'
+[0.379s] DEBUG:colcon.colcon_core.package_identification:Package 'src/delta_moveit_config' with type 'ros.ament_cmake' and name 'delta_moveit_config'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extension 'ignore'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extension 'ignore_ament_install'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extensions ['colcon_pkg']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extension 'colcon_pkg'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extensions ['colcon_meta']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extension 'colcon_meta'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extensions ['ros']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/more_interfaces) by extension 'ros'
+[0.380s] DEBUG:colcon.colcon_core.package_identification:Package 'src/more_interfaces' with type 'ros.ament_cmake' and name 'more_interfaces'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['ignore', 'ignore_ament_install']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'ignore'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'ignore_ament_install'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['colcon_pkg']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'colcon_pkg'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['colcon_meta']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'colcon_meta'
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extensions ['ros']
+[0.381s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_first_delta) by extension 'ros'
+[0.381s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_first_delta' with type 'ros.ament_python' and name 'my_first_delta'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extensions ['ignore', 'ignore_ament_install']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extension 'ignore'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extension 'ignore_ament_install'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extensions ['colcon_pkg']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extension 'colcon_pkg'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extensions ['colcon_meta']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extension 'colcon_meta'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extensions ['ros']
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_second_delta) by extension 'ros'
+[0.382s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_second_delta' with type 'ros.ament_python' and name 'my_second_delta'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extensions ['ignore', 'ignore_ament_install']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extension 'ignore'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extension 'ignore_ament_install'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extensions ['colcon_pkg']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extension 'colcon_pkg'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extensions ['colcon_meta']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extension 'colcon_meta'
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extensions ['ros']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_third_delta) by extension 'ros'
+[0.384s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_third_delta' with type 'ros.ament_python' and name 'my_third_delta'
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.409s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.412s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 412 installed packages in /opt/ros/iron
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.467s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.467s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.467s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.467s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.467s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.467s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'more_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.468s] DEBUG:colcon.colcon_core.verb:Building package 'more_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces', 'merge_install': False, 'path': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_args' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_target' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_clean_cache' from command line to 'False'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_clean_first' from command line to 'False'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'cmake_force_configure' from command line to 'False'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'ament_cmake_args' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'catkin_cmake_args' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_first_delta' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.468s] DEBUG:colcon.colcon_core.verb:Building package 'my_first_delta' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta', 'merge_install': False, 'path': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta', 'symlink_install': False, 'test_result_base': None}
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'cmake_args' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'cmake_target' from command line to 'None'
+[0.468s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'cmake_clean_cache' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'cmake_clean_first' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'cmake_force_configure' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'ament_cmake_args' from command line to 'None'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'catkin_cmake_args' from command line to 'None'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_second_delta' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.469s] DEBUG:colcon.colcon_core.verb:Building package 'my_second_delta' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta', 'merge_install': False, 'path': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta', 'symlink_install': False, 'test_result_base': None}
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'cmake_args' from command line to 'None'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'cmake_target' from command line to 'None'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'cmake_clean_cache' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'cmake_clean_first' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'cmake_force_configure' from command line to 'False'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'ament_cmake_args' from command line to 'None'
+[0.469s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'catkin_cmake_args' from command line to 'None'
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'my_third_delta' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.470s] DEBUG:colcon.colcon_core.verb:Building package 'my_third_delta' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta', 'merge_install': False, 'path': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_third_delta', 'symlink_install': False, 'test_result_base': None}
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.470s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.471s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.471s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.471s] Level 5:colcon.colcon_core.verb:set package 'delta_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.471s] DEBUG:colcon.colcon_core.verb:Building package 'delta_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config', 'merge_install': False, 'path': '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/delta_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.471s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.472s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'more_interfaces'
+[0.472s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces' with build type 'ament_cmake'
+[0.472s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/more_interfaces'
+[0.476s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.476s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.476s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.486s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces -- -j12 -l12
+[0.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces -- -j12 -l12
+[0.938s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces
+[1.003s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(more_interfaces)
+[1.003s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/more_interfaces
+[1.007s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces' for CMake module files
+[1.007s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces' for CMake config files
+[1.008s] Level 1:colcon.colcon_core.shell:create_environment_hook('more_interfaces', 'cmake_prefix_path')
+[1.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/cmake_prefix_path.ps1'
+[1.009s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/cmake_prefix_path.dsv'
+[1.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/cmake_prefix_path.sh'
+[1.010s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib'
+[1.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('more_interfaces', 'ld_library_path_lib')
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/ld_library_path_lib.ps1'
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/ld_library_path_lib.dsv'
+[1.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/ld_library_path_lib.sh'
+[1.012s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/bin'
+[1.012s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/pkgconfig/more_interfaces.pc'
+[1.012s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages'
+[1.012s] Level 1:colcon.colcon_core.shell:create_environment_hook('more_interfaces', 'pythonpath')
+[1.012s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/pythonpath.ps1'
+[1.013s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/pythonpath.dsv'
+[1.013s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/pythonpath.sh'
+[1.013s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/bin'
+[1.014s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.ps1'
+[1.015s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.dsv'
+[1.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.sh'
+[1.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.bash'
+[1.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.zsh'
+[1.018s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/colcon-core/packages/more_interfaces)
+[1.081s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(more_interfaces)
+[1.081s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces' for CMake module files
+[1.082s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces' for CMake config files
+[1.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('more_interfaces', 'cmake_prefix_path')
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/cmake_prefix_path.ps1'
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/cmake_prefix_path.dsv'
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/cmake_prefix_path.sh'
+[1.084s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib'
+[1.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('more_interfaces', 'ld_library_path_lib')
+[1.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/ld_library_path_lib.ps1'
+[1.084s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/ld_library_path_lib.dsv'
+[1.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/ld_library_path_lib.sh'
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/bin'
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/pkgconfig/more_interfaces.pc'
+[1.085s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/lib/python3.10/site-packages'
+[1.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('more_interfaces', 'pythonpath')
+[1.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/pythonpath.ps1'
+[1.086s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/pythonpath.dsv'
+[1.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/hook/pythonpath.sh'
+[1.086s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/bin'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.ps1'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.dsv'
+[1.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.sh'
+[1.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.bash'
+[1.088s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/more_interfaces/package.zsh'
+[1.089s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/more_interfaces/share/colcon-core/packages/more_interfaces)
+[1.089s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'more_interfaces' finished with '0'
+[1.089s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_first_delta'
+[1.089s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta' with build type 'ament_python'
+[1.089s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_first_delta', 'ament_prefix_path')
+[1.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/ament_prefix_path.ps1'
+[1.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/ament_prefix_path.dsv'
+[1.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/ament_prefix_path.sh'
+[1.091s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.091s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.369s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta'
+[1.370s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.370s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_first_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/install.log --single-version-externally-managed install_data
+[2.042s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta' for CMake module files
+[2.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta' returned '0': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_first_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_first_delta/install.log --single-version-externally-managed install_data
+[2.043s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta' for CMake config files
+[2.044s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib'
+[2.044s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/bin'
+[2.044s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/pkgconfig/my_first_delta.pc'
+[2.044s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/lib/python3.10/site-packages'
+[2.044s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_first_delta', 'pythonpath')
+[2.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/pythonpath.ps1'
+[2.044s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/pythonpath.dsv'
+[2.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/hook/pythonpath.sh'
+[2.045s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/bin'
+[2.045s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_first_delta)
+[2.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/package.ps1'
+[2.046s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/package.dsv'
+[2.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/package.sh'
+[2.046s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/package.bash'
+[2.047s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/my_first_delta/package.zsh'
+[2.047s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_first_delta/share/colcon-core/packages/my_first_delta)
+[2.047s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_first_delta' finished with '0'
+[2.047s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_second_delta'
+[2.047s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta' with build type 'ament_python'
+[2.047s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_second_delta', 'ament_prefix_path')
+[2.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/hook/ament_prefix_path.ps1'
+[2.048s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/hook/ament_prefix_path.dsv'
+[2.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/hook/ament_prefix_path.sh'
+[2.049s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.049s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.307s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta'
+[2.307s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.307s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.651s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_second_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/install.log --single-version-externally-managed install_data
+[2.949s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta' for CMake module files
+[2.949s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_second_delta' returned '0': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_second_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_second_delta/install.log --single-version-externally-managed install_data
+[2.949s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta' for CMake config files
+[2.950s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib'
+[2.950s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/bin'
+[2.950s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/pkgconfig/my_second_delta.pc'
+[2.950s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/lib/python3.10/site-packages'
+[2.950s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_second_delta', 'pythonpath')
+[2.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/hook/pythonpath.ps1'
+[2.951s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/hook/pythonpath.dsv'
+[2.951s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/hook/pythonpath.sh'
+[2.952s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/bin'
+[2.952s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_second_delta)
+[2.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/package.ps1'
+[2.952s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/package.dsv'
+[2.953s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/package.sh'
+[2.953s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/package.bash'
+[2.953s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/package.zsh'
+[2.953s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/colcon-core/packages/my_second_delta)
+[2.954s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_second_delta' finished with '0'
+[2.954s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_third_delta'
+[2.954s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_third_delta' with build type 'ament_python'
+[2.954s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_third_delta', 'ament_prefix_path')
+[2.954s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/hook/ament_prefix_path.ps1'
+[2.954s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/hook/ament_prefix_path.dsv'
+[2.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/hook/ament_prefix_path.sh'
+[2.955s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.955s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.211s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_third_delta'
+[3.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.545s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_third_delta': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_third_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta/install.log --single-version-externally-managed install_data
+[3.831s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta' for CMake module files
+[3.831s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_third_delta' returned '0': PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta/prefix_override:/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_third_delta build --build-base /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta/build install --record /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/my_third_delta/install.log --single-version-externally-managed install_data
+[3.831s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta' for CMake config files
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib'
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/bin'
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/pkgconfig/my_third_delta.pc'
+[3.832s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages'
+[3.832s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_third_delta', 'pythonpath')
+[3.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/hook/pythonpath.ps1'
+[3.833s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/hook/pythonpath.dsv'
+[3.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/hook/pythonpath.sh'
+[3.833s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/bin'
+[3.834s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_third_delta)
+[3.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/package.ps1'
+[3.834s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/package.dsv'
+[3.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/package.sh'
+[3.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/package.bash'
+[3.835s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/my_third_delta/package.zsh'
+[3.835s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/share/colcon-core/packages/my_third_delta)
+[3.835s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'my_third_delta' finished with '0'
+[3.835s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'delta_moveit_config'
+[3.836s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/delta_moveit_config' with build type 'ament_cmake'
+[3.836s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/delta_moveit_config'
+[3.836s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.836s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.844s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config -- -j12 -l12
+[3.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config -- -j12 -l12
+[3.899s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config
+[3.910s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(delta_moveit_config)
+[3.911s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config' for CMake module files
+[3.911s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/iron PYTHONPATH=/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_third_delta/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/build/delta_moveit_config
+[3.911s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config' for CMake config files
+[3.912s] Level 1:colcon.colcon_core.shell:create_environment_hook('delta_moveit_config', 'cmake_prefix_path')
+[3.912s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/hook/cmake_prefix_path.ps1'
+[3.912s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/hook/cmake_prefix_path.dsv'
+[3.913s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/hook/cmake_prefix_path.sh'
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/bin'
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/lib/pkgconfig/delta_moveit_config.pc'
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/lib/python3.10/site-packages'
+[3.913s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/bin'
+[3.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.ps1'
+[3.914s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.dsv'
+[3.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.sh'
+[3.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.bash'
+[3.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.zsh'
+[3.915s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/colcon-core/packages/delta_moveit_config)
+[3.936s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(delta_moveit_config)
+[3.936s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config' for CMake module files
+[3.937s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config' for CMake config files
+[3.937s] Level 1:colcon.colcon_core.shell:create_environment_hook('delta_moveit_config', 'cmake_prefix_path')
+[3.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/hook/cmake_prefix_path.ps1'
+[3.938s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/hook/cmake_prefix_path.dsv'
+[3.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/hook/cmake_prefix_path.sh'
+[3.938s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/bin'
+[3.939s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/lib/pkgconfig/delta_moveit_config.pc'
+[3.939s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/lib/python3.10/site-packages'
+[3.939s] Level 1:colcon.colcon_core.environment:checking '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/bin'
+[3.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.ps1'
+[3.940s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.dsv'
+[3.940s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.sh'
+[3.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.bash'
+[3.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/delta_moveit_config/package.zsh'
+[3.942s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/delta_moveit_config/share/colcon-core/packages/delta_moveit_config)
+[3.942s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'delta_moveit_config' finished with '0'
+[3.942s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[3.942s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[3.942s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.949s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.949s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.949s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.965s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.966s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.ps1'
+[3.967s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/_local_setup_util_ps1.py'
+[3.969s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.ps1'
+[3.971s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.sh'
+[3.972s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/_local_setup_util_sh.py'
+[3.972s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.sh'
+[3.974s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.bash'
+[3.974s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.bash'
+[3.976s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/local_setup.zsh'
+[3.977s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/setup.zsh'
