@@ -13,6 +13,7 @@ setup(
         ('share/' + package_name + '/launch', ['launch/launch_delta.py']),
         ('share/' + package_name + '/urdf', ['urdf/delta.urdf.xacro', 'urdf/macros.xacro', 'urdf/gazebo_stuff.xacro', 'urdf/delta.urdf']),
         ('share/' + package_name + '/meshes', ['meshes/Base_Fija.stl', 'meshes/Brazo.stl', 'meshes/Base_Movil.stl']),
+        ('share/' + package_name + '/data', ['data/coordinates.xlsx']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -23,6 +24,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'joint_publisher = my_second_delta.joint_publisher:main',
+            'inverse_kinematics_server = my_second_delta.inverse_kinematics_server:main',
+            'inverse_kinematics_client = my_second_delta.inverse_kinematics_client:main',
+            'excel_publisher = my_second_delta.excel_publisher:main',
         ],
     },
 )

@@ -53,13 +53,13 @@
   <xacro:macro name="delta_arm" params="prefix">
     <link name="${prefix}upper_link">
       <collision>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="${180*PI/180} 0 0"/>
         <geometry>
           <box size="${upper_length} ${upper_width} ${upper_height}"/>
         </geometry>
       </collision>
       <visual>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="${180*PI/180} 0 0"/>
         <geometry>
           <mesh filename="file://$(find my_second_delta)/meshes/Brazo.stl" scale="0.001 0.001 0.001"/>
         </geometry>
@@ -68,7 +68,7 @@
         </material>
       </visual>
       <xacro:inertial_box mass="${mass}" x="${upper_length}" y="${upper_width}" z="${upper_height}">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="${180*PI/180} 0 0"/>
       </xacro:inertial_box>
     </link>
 

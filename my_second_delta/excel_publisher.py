@@ -1,8 +1,12 @@
+import os
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
 from rclpy.qos import QoSProfile, QoSHistoryPolicy
 import pandas as pd
+
+from ament_index_python.packages import get_package_share_directory
 
 class ExcelPublisher(Node):
     def __init__(self, excel_file):
@@ -27,7 +31,7 @@ class ExcelPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    excel_publisher = ExcelPublisher('/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/src/my_first_delta/my_first_delta/data/coordinates.xlsx')  # Replace with your Excel file name
+    excel_publisher = ExcelPublisher(os.path.join(get_package_share_directory('my_second_delta'), 'data', 'coordinates.xlsx'))  # Replace with your Excel file name
 
     rclpy.spin(excel_publisher)
 

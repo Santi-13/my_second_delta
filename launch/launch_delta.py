@@ -46,10 +46,26 @@ def generate_launch_description():
             arguments=['-entity', 'delta', '-topic', 'robot_description'],
             output='screen',
         ),
+        #Node(
+        #    name='joint_state_publisher',
+        #    package='joint_state_publisher',
+        #    executable='joint_state_publisher',
+        #    parameters=[{'robot_description': robot_description_content}],
+        #),
         Node(
-            name='joint_state_publisher',
-            package='joint_state_publisher',
-            executable='joint_state_publisher',
-            parameters=[{'robot_description': robot_description_content}],
+            package='my_second_delta',
+            name='excel_publisher',
+            executable='excel_publisher'
         ),
+        Node(
+            package='my_second_delta',
+            name='inverse_kinematics_server',
+            executable='inverse_kinematics_server'
+        ),
+        Node(
+            package='my_second_delta',
+            name='joint_publisher',
+            executable='joint_publisher'
+        ),
+
     ])
