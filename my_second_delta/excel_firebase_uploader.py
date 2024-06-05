@@ -1,5 +1,11 @@
-import os
-import time
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+# Path to the service account key file
+cred = credentials.Certificate('/home/sanmaster/Downloads/serviceAccountKey.json')
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
 
 import rclpy
 from rclpy.node import Node
@@ -54,3 +60,12 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+
+def upload_data_to_firestore(self, cell_a, cell_b, cell_c):
+        doc_ref = db.collection(u'excelData').document()
+        doc_ref.set({
+            u'cellA': cell_a,
+            u'cellB': cell_b,
+            u'cellC': cell_c
+        })

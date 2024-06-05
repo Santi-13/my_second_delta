@@ -1,19 +1,89 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <physics type='ode'>
+  <physics type='ode'>
     <max_step_size>0.001</max_step_size>
     <real_time_factor>0.1</real_time_factor>
     <real_time_update_rate>1000</real_time_update_rate>
-    <gravity>0 0 -9.8</gravity>
+    <gravity>0 0 -4.8</gravity>
   </physics>
 
+  <xacro:property name="PI" value="3.1415926535897931"/>
+
   <gazebo>
-    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace></robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-      <legacyModeNS>true</legacyModeNS>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>$(find my_second_delta)/config/delta_joint_position.yaml</parameters>
     </plugin>
   </gazebo>
+
+  <ros2_control name="MyDeltaJointGroupPositionController" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>    
+    </hardware>
+    <!-- Define the front_delta_arm_joint -->
+    <joint name="front_delta_arm_joint">
+      <command_interface name="position">
+        <param name="min">-100</param>
+        <param name="max">100</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-10</param>  
+        <param name="max">10</param>
+      </command_interface>
+      <command_interface name="effort">
+        <param name="min">-10</param>  
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+    <!-- Define the right_delta_arm_joint -->
+    <joint name="right_delta_arm_joint">
+      <command_interface name="position">
+        <param name="min">-100</param>
+        <param name="max">100</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
+      <command_interface name="effort">
+        <param name="min">-10</param>  
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+  <!-- Define the right_delta_arm_joint -->
+    <joint name="left_delta_arm_joint">
+      <command_interface name="position">
+        <param name="min">-100</param>
+        <param name="max">100</param>
+      </command_interface>
+      <command_interface name="velocity">
+        <param name="min">-10</param>
+        <param name="max">10</param>
+      </command_interface>
+      <command_interface name="effort">
+        <param name="min">-10</param>  
+        <param name="max">10</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+    </joint>
+  </ros2_control>
+
 
   <gazebo reference="base_link">
     <material>Gazebo/Orange</material>
@@ -25,124 +95,6 @@
     <selfCollide>false</selfCollide>
   </gazebo>
 
-  <transmission name="front_delta_arm_joint_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="front_delta_arm_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="front_delta_arm_joint_motor">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="right_delta_arm_joint_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_delta_arm_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="right_delta_arm_joint_motor">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="left_delta_arm_joint_trans">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="left_delta_arm_joint">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="left_delta_arm_joint_motor">
-      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-
-  <xacro:macro name="delta_arm_gazebo" params="prefix">
-    <gazebo reference="${prefix}upper_link">
-      <material>Gazebo/Grey</material>
-      <selfCollide>false</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}lower_top_link">
-      <material>Gazebo/Grey</material>
-      <selfCollide>false</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}lower_right_link">
-      <material>Gazebo/Grey</material>
-      <selfCollide>false</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}lower_left_link">
-      <material>Gazebo/Grey</material>
-      <selfCollide>false</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}lower_bottom_link">
-      <material>Gazebo/Grey</material>
-      <selfCollide>false</selfCollide>
-    </gazebo>
-    <gazebo reference="${prefix}lower_end_link">
-      <material>Gazebo/Red</material>
-      <selfCollide>false</selfCollide>
-    </gazebo>
-
-    <transmission name="${prefix}upper_joint_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}upper_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}upper_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-    <transmission name="${prefix}lower_top_rignt_joint_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}lower_top_rignt_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}lower_top_rignt_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-    <transmission name="${prefix}lower_top_left_joint_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}lower_top_left_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}lower_top_left_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-    <transmission name="${prefix}lower_right_bottom_joint_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}lower_right_bottom_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}lower_right_bottom_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-    <transmission name="${prefix}lower_bottom_end_joint_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}lower_bottom_end_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}lower_bottom_end_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-    <transmission name="${prefix}lower_bottom_virtual_joint_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${prefix}lower_bottom_virtual_joint">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${prefix}lower_bottom_virtual_joint_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmission>
-  </xacro:macro>
 
   <material name="black">
     <color rgba="0.0 0.0 0.0 1.0"/>

@@ -14,6 +14,8 @@ setup(
         ('share/' + package_name + '/urdf', ['urdf/delta.urdf.xacro', 'urdf/macros.xacro', 'urdf/gazebo_stuff.xacro', 'urdf/delta.urdf']),
         ('share/' + package_name + '/meshes', ['meshes/Base_Fija.stl', 'meshes/Brazo.stl', 'meshes/Base_Movil.stl']),
         ('share/' + package_name + '/data', ['data/coordinates.xlsx']),
+        ('share/' + package_name + '/config', ['config/delta_joint_position.yaml']),
+        ('include/' + package_name + '/hardware', ['hardware/include/ros2_control_demo_example_3/rrbot_system_multi_interface.hpp','hardware/include/ros2_control_demo_example_3/visibility_control.h']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,7 +29,8 @@ setup(
             'joint_publisher = my_second_delta.joint_publisher:main',
             'inverse_kinematics_server = my_second_delta.inverse_kinematics_server:main',
             'inverse_kinematics_client = my_second_delta.inverse_kinematics_client:main',
-            'excel_publisher = my_second_delta.excel_publisher:main',
-        ],
+            'plc_reader = my_second_delta.plc_reader:main',
+            'spawner = my_second_delta.spawner:main'        
+            ],
     },
 )

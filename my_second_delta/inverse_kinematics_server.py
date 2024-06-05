@@ -25,12 +25,12 @@ class InverseKinematicsServer(Node):
         theta = np.zeros((3,1), float)
 
         for i in range(0,3):
-            pos_i = np.matmul(self.rotz(120*i), np.matrix([[request.x], [request.y], [request.z]], float))   
+            pos_i = np.matmul(self.rotz((120*np.pi/180)*i), np.matrix([[request.x], [request.y], [request.z]], float))   
             x_i = pos_i[0]
             y_i = pos_i[1]
             z_i = pos_i[2]
 
-            h = np.sqrt(self.l2**2 - x_i**2)
+            h = np.sqrt( self.l2**2 - x_i**2 )
             r = np.sqrt( ( y_i + self.rho_p - self.rho_b )**2 + z_i**2 )
 
             theta[i] = 90 + np.arcsin( (y_i + self.rho_p - self.rho_b ) / r ) * 180 / np.pi - np.arccos( ( r**2 + self.l1**2 - h**2 ) / ( 2 * self.l1 * r ) ) * 180 / np.pi

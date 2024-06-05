@@ -280,6 +280,5 @@
       </joint>
     </gazebo>
 
-    <xacro:delta_arm_gazebo prefix="${prefix}"/>
   </xacro:macro>
 </robot>

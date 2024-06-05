@@ -1,0 +1,37 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 30  # Hz for the controller manager's update loop
+    use_sim_time: true
+
+    joints_position_controller:
+      type: position_controllers/JointGroupPositionController
+
+    joints_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    joint_torque_controller:  # Adding the torque controller
+      type: effort_controllers/JointGroupEffortController 
+    
+joints_position_controller:
+  ros__parameters:
+    joints: 
+      - front_delta_arm_joint
+      - right_delta_arm_joint
+      - left_delta_arm_joint
+
+joints_velocity_controller:
+  ros__parameters:
+    joints: 
+      - front_delta_arm_joint
+      - right_delta_arm_joint
+      - left_delta_arm_joint
+
+joint_torque_controller:
+  ros__parameters:
+    joints: 
+      - front_delta_arm_joint
+      - right_delta_arm_joint
+      - left_delta_arm_joint
