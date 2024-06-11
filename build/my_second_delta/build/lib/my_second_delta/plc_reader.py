@@ -18,23 +18,34 @@ class PLCReaderNode(Node):
 
     def connect_to_plc(self):
         self.plc = snap7.client.Client()
-        self.plc.set_connection_type(snap7.types.AT.S7_1200)
-        self.plc.set_connection_params('192.168.0.100', 0, 1)  # IP, Rack, Slot
-        if not self.plc.get_connected():
-            self.plc.connect()
+        while not self.plc.get_connected():
+            try:
+                self.plc.disconnect()
+                # attempt connection
+                self.get_logger().info('Trying to connect to PLC...')
+                self.plc.connect('192.168.0.15', 0, 1)
+            except Exception:
+                pass
+            time.sleep(1)        
+        self.get_logger().info('Connected to PLC!')
 
     def read_coordinates_from_plc(self):
-        x_address = 0  # Example address for X coordinate
-        y_address = 4  # Example address for Y coordinate
-        z_address = 8  # Example address for Z coordinate
+        # Addresses for the Real values
+        x_address = 32  # Example address for X coordinate
+        y_address = 28  # Example address for Y coordinate
+        z_address = 36  # Example address for Z coordinate
+             
+        db_number = 1 
 
-        # Reading Real values requires specifying the data block (DB) number and the start address within that DB
-        # Assuming the Real values are stored in DB1 starting at byte offsets corresponding to M12, M16, M20
-        db_number = 1  # Example DB number, adjust based on your PLC program
-        x_value = self.plc.db_read(db_number, x_address, S7WLReal)
-        y_value = self.plc.db_read(db_number, y_address, S7WLReal)
-        z_value = self.plc.db_read(db_number, z_address, S7WLReal)
-        data = [x_value, y_value, z_value]
+        x_value = self.plc.db_read(db_number, x_address, 4)
+        y_value = self.plc.db_read(db_number, y_address, 4)
+        z_value = self.plc.db_read(db_number, z_address, 4)
+        
+        # Convert the read bytes to floats
+        x_float = snap7.util.get_real(x_value, 0)
+        y_float = snap7.util.get_real(y_value, 0)
+        z_float = snap7.util.get_real(z_value, 0)
+        data = [x_float, y_float, z_float]
         return data
 
     def timer_callback(self):

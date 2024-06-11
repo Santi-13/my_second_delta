@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<robot name="game_board">
+  <link name="board">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.15 0 0.35"/>
+      <geometry>
+        <mesh filename="file://$(find my_second_delta)/meshes/tictactoe_Board.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot name="delta" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  <xacro:property name="inch" value="0.0254"/>
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="width" value="0.05" /> <!-- Square dimensions (widthxwidth) of beams -->
+  <xacro:property name="base_radius" value="0.111" /> 
+  <xacro:property name="base_length" value="${inch/2}"/>
+  <xacro:property name="platform_radius" value="0.0345" /> 
+  <xacro:property name="platform_length" value="${inch/4}"/>
+  <xacro:property name="platform_lower_link_dist" value="${platform_radius+0.03}"/>
+
+  <xacro:include filename="macros.xacro" />
+  <xacro:include filename="gazebo_stuff.xacro" />
+
+  <!-- Used for fixing robot to Gazebo 'base_link' -->
+  <link name="world"/>
+
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 2" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 ${30*PI/180}"/>
+      <geometry>
+        <cylinder radius="${base_radius}" length="${base_length}"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 ${30*PI/180}"/>
+      <geometry>
+        <mesh filename="file://$(find my_second_delta)/meshes/Base_Fija.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="red">
+        
+      </material>
+    </visual>
+    <xacro:inertial_cylinder mass="1.616" length="${base_length}" radius="${base_radius}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_cylinder>
+  </link>
+
+  <xacro:delta_arm prefix="front_"/>
+
+  <joint name="front_delta_arm_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="front_upper_link"/>
+    <origin xyz="0.12 0 -0.0285" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit lower="${-20*PI/180}" upper="${90*PI/180}" effort="6" velocity="8"/>
+  </joint>
+
+  <xacro:delta_arm prefix="right_"/>
+  
+  <joint name="right_delta_arm_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="right_upper_link"/>
+    <origin xyz="-0.06 -0.1039 -0.0285" rpy="0 0 ${-120*PI/180}"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit lower="${-20*PI/180}" upper="${90*PI/180}" effort="6" velocity="8"/>
+  </joint>
+
+  <xacro:delta_arm prefix="left_"/>
+
+  <joint name="left_delta_arm_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="left_upper_link"/>
+    <origin xyz="-0.06 0.1039 -0.0285" rpy="0 0 ${120*PI/180}"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit lower="${-20*PI/180}" upper="${90*PI/180}" effort="6" velocity="8"/>
+  </joint>
+
+  <link name="end_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 ${-30*PI/180}"/>
+      <geometry>
+	      <cylinder length="${platform_length}" radius="${platform_radius}"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 ${-30*PI/180}"/>
+      <geometry>
+        <mesh filename="file://$(find my_second_delta)/meshes/Base_Movil.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="black">
+      </material>
+    </visual>
+    <xacro:inertial_cylinder mass="${mass}" length="${platform_length}" radius="${platform_radius}">
+      <origin xyz="0 0 0" rpy="0 0 ${-30*PI/180}"/>
+    </xacro:inertial_cylinder>
+  </link>
+
+  <joint name="front_end_joint" type="fixed">
+    <parent link="front_lower_end_link"/>
+    <child link="end_link"/>
+    <origin xyz="-0.0645 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="right_end_virtual_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia
+        ixx="0.0001" ixy="0.0" ixz="0.0"
+        iyy="0.0001" iyz="0.0"
+        izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="right_end_virtual_joint" type="fixed">
+    <parent link="end_link"/>
+    <child link="right_end_virtual_link"/>
+    <origin xyz="-0.017 -0.02785 0" rpy="0 0 ${-120*PI/180}"/>
+  </joint>
+
+  <link name="left_end_virtual_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia
+        ixx="0.0001" ixy="0.0" ixz="0.0"
+        iyy="0.0001" iyz="0.0"
+        izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <joint name="left_end_virtual_joint" type="fixed">
+    <parent link="end_link"/>
+    <child link="left_end_virtual_link"/>
+    <origin xyz="-0.017 0.02785 0" rpy="0 0 ${120*PI/180}"/>
+  </joint>
+
+  <gazebo>
+    <joint name="right_end_joint" type="fixed">
+      <parent>right_lower_end_link</parent>
+      <child>right_end_virtual_link</child>
+      <pose> 0 0 0 0 0 0 </pose>
+    </joint>
+    <joint name="left_end_joint" type="fixed">
+      <parent>left_lower_end_link</parent>
+      <child>left_end_virtual_link</child>
+      <pose> 0 0 0 0 0 0 </pose>
+    </joint>
+  </gazebo>
+</robot>

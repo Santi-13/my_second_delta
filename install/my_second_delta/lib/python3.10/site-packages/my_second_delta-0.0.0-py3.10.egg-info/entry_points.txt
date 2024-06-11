@@ -1,0 +1,7 @@
+[console_scripts]
+inverse_kinematics_client = my_second_delta.inverse_kinematics_client:main
+inverse_kinematics_server = my_second_delta.inverse_kinematics_server:main
+joint_publisher = my_second_delta.joint_publisher:main
+plc_reader = my_second_delta.plc_reader:main
+spawner = my_second_delta.spawner:main
+

@@ -15,6 +15,15 @@ from launch_ros.substitutions import FindPackageShare
 import xacro
 
 def generate_launch_description():
+    # Loading URDF file into a parameter
+    bringup_dir = get_package_share_directory('my_second_delta')
+    xacro_path = os.path.join(bringup_dir, 'urdf', 'delta.urdf.xacro')
+    robot_description_content = xacro.process_file(xacro_path).toxml()
+    world_path = os.path.join(bringup_dir, 'worlds', 'delta_world.world')
+
+
+    ros2_control_config_path = os.path.join(bringup_dir, 'config', 'delta_joint_position.yaml')
+
     declared_arguments = []
     declared_arguments.append(
         DeclareLaunchArgument(
@@ -73,13 +82,15 @@ def generate_launch_description():
             description='Whether to start gzserver'
         )
     )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "world", 
+            default_value=world_path,
+            description='Full path to the world model file to load'
+        )
+    )
         
-    # Loading URDF file into a parameter
-    bringup_dir = get_package_share_directory('my_second_delta')
-    xacro_path = os.path.join(bringup_dir, 'urdf', 'delta.urdf.xacro')
-    robot_description_content = xacro.process_file(xacro_path).toxml()
-
-    ros2_control_config_path = os.path.join(bringup_dir, 'config', 'delta_joint_position.yaml')
+    
 
     # Initialize launch parameters
     prefix = LaunchConfiguration("prefix")
@@ -90,6 +101,7 @@ def generate_launch_description():
     gui = LaunchConfiguration("gui")
     use_sim_time = LaunchConfiguration("use_sim_time")
     gz_server = LaunchConfiguration('server')
+    world_arg = LaunchConfiguration("world")
 
     # Get URDF via xacro
     robot_description_content = Command(
@@ -174,10 +186,16 @@ def generate_launch_description():
         arguments=[robot_controller, '--controller-manager', '/controller_manager'],
     )
 
-    excel_publisher_node = Node(
+    plc_reader_writer_node = Node(
         package='my_second_delta',
-        name='excel_publisher',
-        executable='excel_publisher'
+        name='plc_reader_writer',
+        executable='plc_reader_writer'
+    )
+
+    tictactoe_player_node = Node(
+        package='my_second_delta',
+        name='tictactoe_player',
+        executable='tictactoe_player'
     )
 
     inverse_kinematics_srv_node = Node(
@@ -211,7 +229,9 @@ def generate_launch_description():
     delay_copy_delta_nodes_after_robot_controller_spawner = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=robot_controller_spawner,
-            on_exit=[joint_publisher_node, excel_publisher_node]
+            on_exit=[joint_publisher_node, plc_reader_writer_node
+                     , tictactoe_player_node
+                     ]
         )
     )
 
@@ -225,12 +245,13 @@ def generate_launch_description():
         delay_copy_delta_nodes_after_robot_controller_spawner,
         inverse_kinematics_srv_node,
     ]
-    return LaunchDescription([
+    return LaunchDescription(declared_arguments +[
         SetEnvironmentVariable(
             'GAZEBO_MODEL_PATH', '/home/sanmaster/onshape-to-robot-tutorial/delta_robot_min_ws/install/my_second_delta/share/my_second_delta/meshes:${GAZEBO_MODEL_PATH}'
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-        )
-    ] + declared_arguments + nodes)
+                launch_arguments={'world': world_arg}.items(),
+            )
+    ] + nodes)
