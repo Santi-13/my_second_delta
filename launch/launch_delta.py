@@ -210,6 +210,12 @@ def generate_launch_description():
         executable='joint_publisher'
     )
 
+    teleop_keyboard_node = Node(
+        package='my_second_delta',
+        name='teleop_keyboard',
+        executable='teleop_keyboard'
+    )
+
     # Delay rviz start after `joint_state_broadcaster`
     delay_rviz_after_joint_state_broadcaster_spawner = RegisterEventHandler(
         event_handler=OnProcessExit(
@@ -231,6 +237,7 @@ def generate_launch_description():
             target_action=robot_controller_spawner,
             on_exit=[joint_publisher_node, plc_reader_writer_node
                      , tictactoe_player_node
+                     , teleop_keyboard_node
                      ]
         )
     )

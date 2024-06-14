@@ -16,7 +16,7 @@ class JointPublisher(Node):
         self.cli = self.create_client(DeltaTheta, 'get_delta_theta')       
         self.publisher_ = self.create_publisher(Float64MultiArray, 'joint_torque_controller/commands', qos)
         self.subscriber = self.create_subscription(JointState, 'joint_states', self.joint_state_listener, qos)
-        self.target_subscriber = self.create_subscription(Float64MultiArray, 'plc_tags', self.end_position_listener, qos)
+        self.target_subscriber = self.create_subscription(Float64MultiArray, 'plc_tags_read', self.end_position_listener, qos)
 
         self.x = 0.0
         self.y = 0.0
@@ -67,7 +67,7 @@ class JointPublisher(Node):
         msg = Float64MultiArray()
         msg.data = torques
         self.publisher_.publish(msg)
-        self.get_logger().info('Applying torques: %f Nm | %f Nm | %f Nm' % (torques[0], torques[1], torques[2]))
+        #self.get_logger().info('Applying torques: %f Nm | %f Nm | %f Nm' % (torques[0], torques[1], torques[2]))
 
         
 def main(args=None):

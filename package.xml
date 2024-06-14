@@ -24,8 +24,8 @@
   <exec_depend>forward_command_controller</exec_depend>
   <exec_depend>snap7</exec_depend>
   <exec_depend>copy</exec_depend>
-  <exec_depend>pygame</exec_depend>
   <exec_depend>random</exec_depend>
+  <exec_depend>pynput</exec_depend>
   <exec_depend>struct</exec_depend>
 
 

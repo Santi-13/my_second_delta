@@ -1,16 +1,16 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
-import snap7
+
 
 class ticTacToePlayerNode(Node):
 
     def __init__(self):
         super().__init__('plc_writer_node')
-        self.publisher_ = self.create_publisher(Float64MultiArray, 'best_play_coordinates', 10)
+        self.publisher_ = self.create_publisher(Float64MultiArray, 'pre_plc_tags_write', 10)
         self.subscription = self.create_subscription(
             Float64MultiArray,
-            'plc_tags',
+            'plc_tags_read',
             self.listener_callback,
             10)
         self.subscription  # prevent unused subscription warning
@@ -154,6 +154,8 @@ class ticTacToePlayerNode(Node):
         
         else:
             self.last_known_enemy_position = None
+            msg.data = [float(0), float(0), float(0), float(0)]
+            self.publisher_.publish(msg)
             self.reset_game()
 
 

@@ -34,6 +34,7 @@ setup(
             'spawner = my_second_delta.spawner:main',
             'tictactoe = my_second_delta.tictactoe:main',
             'tictactoe_player = my_second_delta.tictactoe_player:main',
+            'teleop_keyboard = my_second_delta.teleop_keyboard:main'
             ],
     },
 )
