@@ -10,8 +10,8 @@ The position of the end actuator is received through a TCP connection with a Sie
 As mentioned before, the robot's description (its links and joints) is simulated using a .xacro file; this, so the description of the robot can be easily achieved using diverse macros and property tags. Some links have visual meshes (seen on the meshes folder), so the robot reassembles the physical version. A simulated world, as well as a tic tac toe board was also simulated. Click each link to find more about [urdf](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/URDF/URDF-Main.html), [xacro](https://wiki.ros.org/xacro), and [sdf](http://sdformat.org/tutorials) files.
 
 <p float="left" align="center">
-  <img src="https://github.com/Santi-13/my_second_delta/assets/61756465/b78eaca6-bf1b-4d72-9f3f-4bc736d88059" width="400"/>
-  <img src="https://github.com/Santi-13/my_second_delta/assets/61756465/b5154c92-94b8-4eed-bd64-0133c242247a" width="450"/>
+  <img src="https://github.com/Santi-13/my_second_delta/assets/61756465/b78eaca6-bf1b-4d72-9f3f-4bc736d88059" width="350"/>
+  <img src="https://github.com/Santi-13/my_second_delta/assets/61756465/b5154c92-94b8-4eed-bd64-0133c242247a" width="400"/>
 </p>
 
 ## Communication and Control of the robot
