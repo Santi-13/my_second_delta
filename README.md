@@ -2,7 +2,7 @@
 With this package, you can create a digital twin of a delta robot simulated in Gazebo. It also works as the processor unit for the decision making process when playing a game of tic tac toe.
 
 ## How does it work? 
-The twin is rendered in gazebo through a urdf .xacro file, which is then converted to the proper file type for Gazebo to render. To overcome the limitation of gazebo of simulating parallel robots, a process similar to the one andy-Chien used for [his delta simulation](https://github.com/andy-Chien/simple_delta_robot/tree/main), though it was needed to update the ros control library to the newer ros2 control library. 
+The twin is rendered in gazebo through a urdf .xacro file, which is then converted to the proper file type for Gazebo to render. To overcome the limitation of gazebo of simulating parallel robots, a process similar to the one andy-Chien used for [his delta simulation](https://github.com/andy-Chien/simple_delta_robot/tree/main) was implemented, though it was needed to update the ros control library to the newer ros2 control library. 
 
 The position of the end actuator is received through a TCP connection with a Siemens PLC (using the snap7 library) among other data, a node within the package (plc_reader_writer.py) reads the end effector position of the physical delta robot, with which an inverse kinematics service can be called which returns the proper angle for each arm to reach the end position. Bidirectional communication is available in which a remote operator can control the physical robot by using WASD commands for x and y movement, as well as QE for z-movements.
 
